@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:WASOperation/WASOperation.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WASDebug/WASDebug.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WASLayoutManger/WASLayoutManager/WASLayoutManager.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WASBinding/WASBinding.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BaseCommon/BaseCommon.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WASUtility/WASUtility.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:WASMain.xcodeproj">
+   </FileRef>
+</Workspace>

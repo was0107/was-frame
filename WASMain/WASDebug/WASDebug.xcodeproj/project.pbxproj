@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD191D2D165C87E5008E971D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD191D2C165C87E5008E971D /* Foundation.framework */; };
+		DD191D3B165C87E5008E971D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD191D3A165C87E5008E971D /* SenTestingKit.framework */; };
+		DD191D3E165C87E5008E971D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD191D2C165C87E5008E971D /* Foundation.framework */; };
+		DD191D41165C87E5008E971D /* libWASDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD191D29165C87E5008E971D /* libWASDebug.a */; };
+		DD191D47165C87E5008E971D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD191D45165C87E5008E971D /* InfoPlist.strings */; };
+		DD191D4A165C87E5008E971D /* WASDebugTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191D49165C87E5008E971D /* WASDebugTests.m */; };
+		DD191D5E165C8859008E971D /* WASDebugWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191D5C165C8859008E971D /* WASDebugWindow.h */; };
+		DD191D5F165C8859008E971D /* WASDebugWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191D5D165C8859008E971D /* WASDebugWindow.m */; };
+		DD191D62165C88A2008E971D /* WASSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191D60165C88A2008E971D /* WASSingleton.h */; };
+		DD191D63165C88A2008E971D /* WASSingleton.mm in Sources */ = {isa = PBXBuildFile; fileRef = DD191D61165C88A2008E971D /* WASSingleton.mm */; };
+		DD191D67165C9366008E971D /* WASDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191D65165C9365008E971D /* WASDebug.h */; };
+		DD191D68165C9366008E971D /* WASDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191D66165C9365008E971D /* WASDebug.m */; };
+		DD191D8C165C97F7008E971D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD191D8B165C97F7008E971D /* UIKit.framework */; };
+		DD191D8E165C97FD008E971D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD191D8D165C97FD008E971D /* QuartzCore.framework */; };
+		DD191DA3165CA0A2008E971D /* WASDebugBaseController.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DA1165CA0A2008E971D /* WASDebugBaseController.h */; };
+		DD191DA4165CA0A2008E971D /* WASDebugBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DA2165CA0A2008E971D /* WASDebugBaseController.m */; };
+		DD191DA7165CA164008E971D /* WASDebugSandBoxViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DA5165CA163008E971D /* WASDebugSandBoxViewController.h */; };
+		DD191DA8165CA164008E971D /* WASDebugSandBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DA6165CA164008E971D /* WASDebugSandBoxViewController.m */; };
+		DD191DAB165CA6AD008E971D /* WASDebugUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DA9165CA6AC008E971D /* WASDebugUtility.h */; };
+		DD191DAC165CA6AD008E971D /* WASDebugUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DAA165CA6AD008E971D /* WASDebugUtility.m */; };
+		DD191DD0165CB894008E971D /* WASDebugDetailView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DCE165CB893008E971D /* WASDebugDetailView.h */; };
+		DD191DD1165CB894008E971D /* WASDebugDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DCF165CB894008E971D /* WASDebugDetailView.m */; };
+		DD191DD5165CCDA8008E971D /* WASDebugMemoryModel.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DD3165CCDA7008E971D /* WASDebugMemoryModel.h */; };
+		DD191DD6165CCDA8008E971D /* WASDebugMemoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DD4165CCDA7008E971D /* WASDebugMemoryModel.m */; };
+		DD191DD9165CCF87008E971D /* NSObject+Ticker.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DD7165CCF85008E971D /* NSObject+Ticker.h */; };
+		DD191DDA165CCF87008E971D /* NSObject+Ticker.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DD8165CCF86008E971D /* NSObject+Ticker.m */; };
+		DD191DDD165CD044008E971D /* NSArray+extentions.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DDB165CD043008E971D /* NSArray+extentions.h */; };
+		DD191DDE165CD044008E971D /* NSArray+extentions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DDC165CD043008E971D /* NSArray+extentions.m */; };
+		DD191DE1165CD36E008E971D /* WASDebugPlotsView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DDF165CD36C008E971D /* WASDebugPlotsView.h */; };
+		DD191DE2165CD36E008E971D /* WASDebugPlotsView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DE0165CD36D008E971D /* WASDebugPlotsView.m */; };
+		DD191DE5165CD411008E971D /* WASDebugMemoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DE3165CD40E008E971D /* WASDebugMemoryView.h */; };
+		DD191DE6165CD411008E971D /* WASDebugMemoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DE4165CD40F008E971D /* WASDebugMemoryView.m */; };
+		DD191DE9165CD9C0008E971D /* WASDebugDashBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = DD191DE7165CD9BE008E971D /* WASDebugDashBoard.h */; };
+		DD191DEA165CD9C0008E971D /* WASDebugDashBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = DD191DE8165CD9BF008E971D /* WASDebugDashBoard.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD191D3F165C87E5008E971D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD191D20165C87E5008E971D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD191D28165C87E5008E971D;
+			remoteInfo = WASDebug;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD191D29165C87E5008E971D /* libWASDebug.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWASDebug.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD191D2C165C87E5008E971D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD191D30165C87E5008E971D /* WASDebug-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WASDebug-Prefix.pch"; sourceTree = "<group>"; };
+		DD191D39165C87E5008E971D /* WASDebugTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WASDebugTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD191D3A165C87E5008E971D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DD191D44165C87E5008E971D /* WASDebugTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WASDebugTests-Info.plist"; sourceTree = "<group>"; };
+		DD191D46165C87E5008E971D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD191D48165C87E5008E971D /* WASDebugTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASDebugTests.h; sourceTree = "<group>"; };
+		DD191D49165C87E5008E971D /* WASDebugTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASDebugTests.m; sourceTree = "<group>"; };
+		DD191D5C165C8859008E971D /* WASDebugWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebugWindow.h; sourceTree = "<group>"; };
+		DD191D5D165C8859008E971D /* WASDebugWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebugWindow.m; sourceTree = "<group>"; };
+		DD191D60165C88A2008E971D /* WASSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASSingleton.h; sourceTree = "<group>"; };
+		DD191D61165C88A2008E971D /* WASSingleton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WASSingleton.mm; sourceTree = "<group>"; };
+		DD191D65165C9365008E971D /* WASDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebug.h; sourceTree = "<group>"; };
+		DD191D66165C9365008E971D /* WASDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebug.m; sourceTree = "<group>"; };
+		DD191D8B165C97F7008E971D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DD191D8D165C97FD008E971D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DD191D90165C9BDA008E971D /* bug@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bug@2x.png"; sourceTree = "<group>"; };
+		DD191D91165C9BDA008E971D /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
+		DD191D92165C9BDA008E971D /* file@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "file@2x.png"; sourceTree = "<group>"; };
+		DD191D93165C9BDA008E971D /* folder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "folder@2x.png"; sourceTree = "<group>"; };
+		DD191DA1165CA0A2008E971D /* WASDebugBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebugBaseController.h; sourceTree = "<group>"; };
+		DD191DA2165CA0A2008E971D /* WASDebugBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebugBaseController.m; sourceTree = "<group>"; };
+		DD191DA5165CA163008E971D /* WASDebugSandBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebugSandBoxViewController.h; sourceTree = "<group>"; };
+		DD191DA6165CA164008E971D /* WASDebugSandBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebugSandBoxViewController.m; sourceTree = "<group>"; };
+		DD191DA9165CA6AC008E971D /* WASDebugUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebugUtility.h; sourceTree = "<group>"; };
+		DD191DAA165CA6AD008E971D /* WASDebugUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebugUtility.m; sourceTree = "<group>"; };
+		DD191DCE165CB893008E971D /* WASDebugDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebugDetailView.h; sourceTree = "<group>"; };
+		DD191DCF165CB894008E971D /* WASDebugDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebugDetailView.m; sourceTree = "<group>"; };
+		DD191DD3165CCDA7008E971D /* WASDebugMemoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebugMemoryModel.h; sourceTree = "<group>"; };
+		DD191DD4165CCDA7008E971D /* WASDebugMemoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebugMemoryModel.m; sourceTree = "<group>"; };
+		DD191DD7165CCF85008E971D /* NSObject+Ticker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Ticker.h"; sourceTree = "<group>"; };
+		DD191DD8165CCF86008E971D /* NSObject+Ticker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Ticker.m"; sourceTree = "<group>"; };
+		DD191DDB165CD043008E971D /* NSArray+extentions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+extentions.h"; sourceTree = "<group>"; };
+		DD191DDC165CD043008E971D /* NSArray+extentions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+extentions.m"; sourceTree = "<group>"; };
+		DD191DDF165CD36C008E971D /* WASDebugPlotsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebugPlotsView.h; sourceTree = "<group>"; };
+		DD191DE0165CD36D008E971D /* WASDebugPlotsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebugPlotsView.m; sourceTree = "<group>"; };
+		DD191DE3165CD40E008E971D /* WASDebugMemoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebugMemoryView.h; sourceTree = "<group>"; };
+		DD191DE4165CD40F008E971D /* WASDebugMemoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebugMemoryView.m; sourceTree = "<group>"; };
+		DD191DE7165CD9BE008E971D /* WASDebugDashBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASDebugDashBoard.h; sourceTree = "<group>"; };
+		DD191DE8165CD9BF008E971D /* WASDebugDashBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASDebugDashBoard.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD191D26165C87E5008E971D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD191D8E165C97FD008E971D /* QuartzCore.framework in Frameworks */,
+				DD191D8C165C97F7008E971D /* UIKit.framework in Frameworks */,
+				DD191D2D165C87E5008E971D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD191D35165C87E5008E971D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD191D3B165C87E5008E971D /* SenTestingKit.framework in Frameworks */,
+				DD191D3E165C87E5008E971D /* Foundation.framework in Frameworks */,
+				DD191D41165C87E5008E971D /* libWASDebug.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD191D1E165C87E5008E971D = {
+			isa = PBXGroup;
+			children = (
+				DD191D2E165C87E5008E971D /* WASDebug */,
+				DD191D42165C87E5008E971D /* WASDebugTests */,
+				DD191D8F165C9BDA008E971D /* resources */,
+				DD191D2B165C87E5008E971D /* Frameworks */,
+				DD191D2A165C87E5008E971D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD191D2A165C87E5008E971D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD191D29165C87E5008E971D /* libWASDebug.a */,
+				DD191D39165C87E5008E971D /* WASDebugTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD191D2B165C87E5008E971D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD191D8D165C97FD008E971D /* QuartzCore.framework */,
+				DD191D8B165C97F7008E971D /* UIKit.framework */,
+				DD191D2C165C87E5008E971D /* Foundation.framework */,
+				DD191D3A165C87E5008E971D /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD191D2E165C87E5008E971D /* WASDebug */ = {
+			isa = PBXGroup;
+			children = (
+				DD191D2F165C87E5008E971D /* Supporting Files */,
+				DD191D60165C88A2008E971D /* WASSingleton.h */,
+				DD191D61165C88A2008E971D /* WASSingleton.mm */,
+				DD191DD7165CCF85008E971D /* NSObject+Ticker.h */,
+				DD191DD8165CCF86008E971D /* NSObject+Ticker.m */,
+				DD191DDB165CD043008E971D /* NSArray+extentions.h */,
+				DD191DDC165CD043008E971D /* NSArray+extentions.m */,
+				DD191DDF165CD36C008E971D /* WASDebugPlotsView.h */,
+				DD191DE0165CD36D008E971D /* WASDebugPlotsView.m */,
+				DD191D65165C9365008E971D /* WASDebug.h */,
+				DD191D66165C9365008E971D /* WASDebug.m */,
+				DD191D5C165C8859008E971D /* WASDebugWindow.h */,
+				DD191D5D165C8859008E971D /* WASDebugWindow.m */,
+				DD191DA1165CA0A2008E971D /* WASDebugBaseController.h */,
+				DD191DA2165CA0A2008E971D /* WASDebugBaseController.m */,
+				DD191DA5165CA163008E971D /* WASDebugSandBoxViewController.h */,
+				DD191DA6165CA164008E971D /* WASDebugSandBoxViewController.m */,
+				DD191DA9165CA6AC008E971D /* WASDebugUtility.h */,
+				DD191DAA165CA6AD008E971D /* WASDebugUtility.m */,
+				DD191DCE165CB893008E971D /* WASDebugDetailView.h */,
+				DD191DCF165CB894008E971D /* WASDebugDetailView.m */,
+				DD191DD3165CCDA7008E971D /* WASDebugMemoryModel.h */,
+				DD191DD4165CCDA7008E971D /* WASDebugMemoryModel.m */,
+				DD191DE3165CD40E008E971D /* WASDebugMemoryView.h */,
+				DD191DE4165CD40F008E971D /* WASDebugMemoryView.m */,
+				DD191DE7165CD9BE008E971D /* WASDebugDashBoard.h */,
+				DD191DE8165CD9BF008E971D /* WASDebugDashBoard.m */,
+			);
+			path = WASDebug;
+			sourceTree = "<group>";
+		};
+		DD191D2F165C87E5008E971D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD191D30165C87E5008E971D /* WASDebug-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD191D42165C87E5008E971D /* WASDebugTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD191D48165C87E5008E971D /* WASDebugTests.h */,
+				DD191D49165C87E5008E971D /* WASDebugTests.m */,
+				DD191D43165C87E5008E971D /* Supporting Files */,
+			);
+			path = WASDebugTests;
+			sourceTree = "<group>";
+		};
+		DD191D43165C87E5008E971D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD191D44165C87E5008E971D /* WASDebugTests-Info.plist */,
+				DD191D45165C87E5008E971D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD191D8F165C9BDA008E971D /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD191D90165C9BDA008E971D /* bug@2x.png */,
+				DD191D91165C9BDA008E971D /* close@2x.png */,
+				DD191D92165C9BDA008E971D /* file@2x.png */,
+				DD191D93165C9BDA008E971D /* folder@2x.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DD191D27165C87E5008E971D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD191D5E165C8859008E971D /* WASDebugWindow.h in Headers */,
+				DD191D62165C88A2008E971D /* WASSingleton.h in Headers */,
+				DD191D67165C9366008E971D /* WASDebug.h in Headers */,
+				DD191DA3165CA0A2008E971D /* WASDebugBaseController.h in Headers */,
+				DD191DA7165CA164008E971D /* WASDebugSandBoxViewController.h in Headers */,
+				DD191DAB165CA6AD008E971D /* WASDebugUtility.h in Headers */,
+				DD191DD0165CB894008E971D /* WASDebugDetailView.h in Headers */,
+				DD191DD5165CCDA8008E971D /* WASDebugMemoryModel.h in Headers */,
+				DD191DD9165CCF87008E971D /* NSObject+Ticker.h in Headers */,
+				DD191DDD165CD044008E971D /* NSArray+extentions.h in Headers */,
+				DD191DE1165CD36E008E971D /* WASDebugPlotsView.h in Headers */,
+				DD191DE5165CD411008E971D /* WASDebugMemoryView.h in Headers */,
+				DD191DE9165CD9C0008E971D /* WASDebugDashBoard.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DD191D28165C87E5008E971D /* WASDebug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD191D4D165C87E5008E971D /* Build configuration list for PBXNativeTarget "WASDebug" */;
+			buildPhases = (
+				DD191D25165C87E5008E971D /* Sources */,
+				DD191D26165C87E5008E971D /* Frameworks */,
+				DD191D27165C87E5008E971D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WASDebug;
+			productName = WASDebug;
+			productReference = DD191D29165C87E5008E971D /* libWASDebug.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DD191D38165C87E5008E971D /* WASDebugTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD191D50165C87E5008E971D /* Build configuration list for PBXNativeTarget "WASDebugTests" */;
+			buildPhases = (
+				DD191D34165C87E5008E971D /* Sources */,
+				DD191D35165C87E5008E971D /* Frameworks */,
+				DD191D36165C87E5008E971D /* Resources */,
+				DD191D37165C87E5008E971D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD191D40165C87E5008E971D /* PBXTargetDependency */,
+			);
+			name = WASDebugTests;
+			productName = WASDebugTests;
+			productReference = DD191D39165C87E5008E971D /* WASDebugTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD191D20165C87E5008E971D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = b5m;
+			};
+			buildConfigurationList = DD191D23165C87E5008E971D /* Build configuration list for PBXProject "WASDebug" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD191D1E165C87E5008E971D;
+			productRefGroup = DD191D2A165C87E5008E971D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD191D28165C87E5008E971D /* WASDebug */,
+				DD191D38165C87E5008E971D /* WASDebugTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD191D36165C87E5008E971D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD191D47165C87E5008E971D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD191D37165C87E5008E971D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD191D25165C87E5008E971D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD191D5F165C8859008E971D /* WASDebugWindow.m in Sources */,
+				DD191D63165C88A2008E971D /* WASSingleton.mm in Sources */,
+				DD191D68165C9366008E971D /* WASDebug.m in Sources */,
+				DD191DA4165CA0A2008E971D /* WASDebugBaseController.m in Sources */,
+				DD191DA8165CA164008E971D /* WASDebugSandBoxViewController.m in Sources */,
+				DD191DAC165CA6AD008E971D /* WASDebugUtility.m in Sources */,
+				DD191DD1165CB894008E971D /* WASDebugDetailView.m in Sources */,
+				DD191DD6165CCDA8008E971D /* WASDebugMemoryModel.m in Sources */,
+				DD191DDA165CCF87008E971D /* NSObject+Ticker.m in Sources */,
+				DD191DDE165CD044008E971D /* NSArray+extentions.m in Sources */,
+				DD191DE2165CD36E008E971D /* WASDebugPlotsView.m in Sources */,
+				DD191DE6165CD411008E971D /* WASDebugMemoryView.m in Sources */,
+				DD191DEA165CD9C0008E971D /* WASDebugDashBoard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD191D34165C87E5008E971D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD191D4A165C87E5008E971D /* WASDebugTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD191D40165C87E5008E971D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD191D28165C87E5008E971D /* WASDebug */;
+			targetProxy = DD191D3F165C87E5008E971D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD191D45165C87E5008E971D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD191D46165C87E5008E971D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD191D4B165C87E5008E971D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DD191D4C165C87E5008E971D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD191D4E165C87E5008E971D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WASDebug.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASDebug/WASDebug-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DD191D4F165C87E5008E971D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WASDebug.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASDebug/WASDebug-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DD191D51165C87E5008E971D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASDebug/WASDebug-Prefix.pch";
+				INFOPLIST_FILE = "WASDebugTests/WASDebugTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DD191D52165C87E5008E971D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASDebug/WASDebug-Prefix.pch";
+				INFOPLIST_FILE = "WASDebugTests/WASDebugTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD191D23165C87E5008E971D /* Build configuration list for PBXProject "WASDebug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD191D4B165C87E5008E971D /* Debug */,
+				DD191D4C165C87E5008E971D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD191D4D165C87E5008E971D /* Build configuration list for PBXNativeTarget "WASDebug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD191D4E165C87E5008E971D /* Debug */,
+				DD191D4F165C87E5008E971D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD191D50165C87E5008E971D /* Build configuration list for PBXNativeTarget "WASDebugTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD191D51165C87E5008E971D /* Debug */,
+				DD191D52165C87E5008E971D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD191D20165C87E5008E971D /* Project object */;
+}

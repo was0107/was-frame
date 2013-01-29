@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD1B0467163E8DF70014B204 /* WASBinding-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = DD1B0458163E8DF70014B204 /* WASBinding-Prefix.pch */; };
+		DD1B0468163E8DF70014B204 /* WASBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1B0459163E8DF70014B204 /* WASBinding.h */; };
+		DD1B0469163E8DF70014B204 /* WASBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B045A163E8DF70014B204 /* WASBinding.m */; };
+		DD1B046A163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1B045B163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.h */; };
+		DD1B046B163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B045C163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.m */; };
+		DD1B046C163E8DF70014B204 /* WASBindingDefinition.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1B045D163E8DF70014B204 /* WASBindingDefinition.h */; };
+		DD1B046D163E8DF70014B204 /* WASBindingDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B045E163E8DF70014B204 /* WASBindingDefinition.m */; };
+		DD1B046E163E8DF70014B204 /* WASBindingOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1B045F163E8DF70014B204 /* WASBindingOptions.h */; };
+		DD1B046F163E8DF70014B204 /* WASBindingOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B0460163E8DF70014B204 /* WASBindingOptions.m */; };
+		DD1B0470163E8DF70014B204 /* WASBindingsSet.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1B0461163E8DF70014B204 /* WASBindingsSet.h */; };
+		DD1B0471163E8DF70014B204 /* WASBindingsSet.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B0462163E8DF70014B204 /* WASBindingsSet.m */; };
+		DD1B0472163E8DF70014B204 /* WASObservingTableSection.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1B0463163E8DF70014B204 /* WASObservingTableSection.h */; };
+		DD1B0473163E8DF70014B204 /* WASObservingTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B0464163E8DF70014B204 /* WASObservingTableSection.m */; };
+		DD1B0474163E8DF70014B204 /* WASTableDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = DD1B0465163E8DF70014B204 /* WASTableDataSource.h */; };
+		DD1B0475163E8DF70014B204 /* WASTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1B0466163E8DF70014B204 /* WASTableDataSource.m */; };
+		DD957F7D162ED5010057BACE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD957F7C162ED5010057BACE /* Foundation.framework */; };
+		DD957F8B162ED5010057BACE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD957F8A162ED5010057BACE /* SenTestingKit.framework */; };
+		DD957F8E162ED5010057BACE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD957F7C162ED5010057BACE /* Foundation.framework */; };
+		DD957F91162ED5010057BACE /* libWASBinding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD957F79162ED5010057BACE /* libWASBinding.a */; };
+		DD957F97162ED5010057BACE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD957F95162ED5010057BACE /* InfoPlist.strings */; };
+		DD957F9A162ED5010057BACE /* WASBindingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD957F99162ED5010057BACE /* WASBindingTests.m */; };
+		DDDEA42316379E2B00FFFD86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDEA42216379E2B00FFFD86 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD957F8F162ED5010057BACE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD957F70162ED5010057BACE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD957F78162ED5010057BACE;
+			remoteInfo = WASBinding;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DD1B0458163E8DF70014B204 /* WASBinding-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WASBinding-Prefix.pch"; sourceTree = "<group>"; };
+		DD1B0459163E8DF70014B204 /* WASBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASBinding.h; sourceTree = "<group>"; };
+		DD1B045A163E8DF70014B204 /* WASBinding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASBinding.m; sourceTree = "<group>"; };
+		DD1B045B163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WASBindingDefinition+WASBindingsLoadingMany.h"; sourceTree = "<group>"; };
+		DD1B045C163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WASBindingDefinition+WASBindingsLoadingMany.m"; sourceTree = "<group>"; };
+		DD1B045D163E8DF70014B204 /* WASBindingDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASBindingDefinition.h; sourceTree = "<group>"; };
+		DD1B045E163E8DF70014B204 /* WASBindingDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASBindingDefinition.m; sourceTree = "<group>"; };
+		DD1B045F163E8DF70014B204 /* WASBindingOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASBindingOptions.h; sourceTree = "<group>"; };
+		DD1B0460163E8DF70014B204 /* WASBindingOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASBindingOptions.m; sourceTree = "<group>"; };
+		DD1B0461163E8DF70014B204 /* WASBindingsSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASBindingsSet.h; sourceTree = "<group>"; };
+		DD1B0462163E8DF70014B204 /* WASBindingsSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASBindingsSet.m; sourceTree = "<group>"; };
+		DD1B0463163E8DF70014B204 /* WASObservingTableSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASObservingTableSection.h; sourceTree = "<group>"; };
+		DD1B0464163E8DF70014B204 /* WASObservingTableSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASObservingTableSection.m; sourceTree = "<group>"; };
+		DD1B0465163E8DF70014B204 /* WASTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASTableDataSource.h; sourceTree = "<group>"; };
+		DD1B0466163E8DF70014B204 /* WASTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASTableDataSource.m; sourceTree = "<group>"; };
+		DD957F79162ED5010057BACE /* libWASBinding.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWASBinding.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD957F7C162ED5010057BACE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD957F89162ED5010057BACE /* WASBindingTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WASBindingTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD957F8A162ED5010057BACE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DD957F94162ED5010057BACE /* WASBindingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WASBindingTests-Info.plist"; sourceTree = "<group>"; };
+		DD957F96162ED5010057BACE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD957F98162ED5010057BACE /* WASBindingTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASBindingTests.h; sourceTree = "<group>"; };
+		DD957F99162ED5010057BACE /* WASBindingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASBindingTests.m; sourceTree = "<group>"; };
+		DDDEA42216379E2B00FFFD86 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD957F76162ED5010057BACE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDDEA42316379E2B00FFFD86 /* UIKit.framework in Frameworks */,
+				DD957F7D162ED5010057BACE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD957F85162ED5010057BACE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD957F8B162ED5010057BACE /* SenTestingKit.framework in Frameworks */,
+				DD957F8E162ED5010057BACE /* Foundation.framework in Frameworks */,
+				DD957F91162ED5010057BACE /* libWASBinding.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD1B0457163E8DF70014B204 /* WASBinding */ = {
+			isa = PBXGroup;
+			children = (
+				DD1B0458163E8DF70014B204 /* WASBinding-Prefix.pch */,
+				DD1B0459163E8DF70014B204 /* WASBinding.h */,
+				DD1B045A163E8DF70014B204 /* WASBinding.m */,
+				DD1B045B163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.h */,
+				DD1B045C163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.m */,
+				DD1B045D163E8DF70014B204 /* WASBindingDefinition.h */,
+				DD1B045E163E8DF70014B204 /* WASBindingDefinition.m */,
+				DD1B045F163E8DF70014B204 /* WASBindingOptions.h */,
+				DD1B0460163E8DF70014B204 /* WASBindingOptions.m */,
+				DD1B0461163E8DF70014B204 /* WASBindingsSet.h */,
+				DD1B0462163E8DF70014B204 /* WASBindingsSet.m */,
+				DD1B0463163E8DF70014B204 /* WASObservingTableSection.h */,
+				DD1B0464163E8DF70014B204 /* WASObservingTableSection.m */,
+				DD1B0465163E8DF70014B204 /* WASTableDataSource.h */,
+				DD1B0466163E8DF70014B204 /* WASTableDataSource.m */,
+			);
+			path = WASBinding;
+			sourceTree = "<group>";
+		};
+		DD957F6E162ED5010057BACE = {
+			isa = PBXGroup;
+			children = (
+				DD1B0457163E8DF70014B204 /* WASBinding */,
+				DD957F92162ED5010057BACE /* WASBindingTests */,
+				DD957F7B162ED5010057BACE /* Frameworks */,
+				DD957F7A162ED5010057BACE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD957F7A162ED5010057BACE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD957F79162ED5010057BACE /* libWASBinding.a */,
+				DD957F89162ED5010057BACE /* WASBindingTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD957F7B162ED5010057BACE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDDEA42216379E2B00FFFD86 /* UIKit.framework */,
+				DD957F7C162ED5010057BACE /* Foundation.framework */,
+				DD957F8A162ED5010057BACE /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD957F92162ED5010057BACE /* WASBindingTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD957F98162ED5010057BACE /* WASBindingTests.h */,
+				DD957F99162ED5010057BACE /* WASBindingTests.m */,
+				DD957F93162ED5010057BACE /* Supporting Files */,
+			);
+			path = WASBindingTests;
+			sourceTree = "<group>";
+		};
+		DD957F93162ED5010057BACE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD957F94162ED5010057BACE /* WASBindingTests-Info.plist */,
+				DD957F95162ED5010057BACE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DD957F77162ED5010057BACE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1B0467163E8DF70014B204 /* WASBinding-Prefix.pch in Headers */,
+				DD1B0468163E8DF70014B204 /* WASBinding.h in Headers */,
+				DD1B046A163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.h in Headers */,
+				DD1B046C163E8DF70014B204 /* WASBindingDefinition.h in Headers */,
+				DD1B046E163E8DF70014B204 /* WASBindingOptions.h in Headers */,
+				DD1B0470163E8DF70014B204 /* WASBindingsSet.h in Headers */,
+				DD1B0472163E8DF70014B204 /* WASObservingTableSection.h in Headers */,
+				DD1B0474163E8DF70014B204 /* WASTableDataSource.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DD957F78162ED5010057BACE /* WASBinding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD957F9D162ED5010057BACE /* Build configuration list for PBXNativeTarget "WASBinding" */;
+			buildPhases = (
+				DD957F75162ED5010057BACE /* Sources */,
+				DD957F76162ED5010057BACE /* Frameworks */,
+				DD957F77162ED5010057BACE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WASBinding;
+			productName = WASBinding;
+			productReference = DD957F79162ED5010057BACE /* libWASBinding.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DD957F88162ED5010057BACE /* WASBindingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD957FA0162ED5010057BACE /* Build configuration list for PBXNativeTarget "WASBindingTests" */;
+			buildPhases = (
+				DD957F84162ED5010057BACE /* Sources */,
+				DD957F85162ED5010057BACE /* Frameworks */,
+				DD957F86162ED5010057BACE /* Resources */,
+				DD957F87162ED5010057BACE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD957F90162ED5010057BACE /* PBXTargetDependency */,
+			);
+			name = WASBindingTests;
+			productName = WASBindingTests;
+			productReference = DD957F89162ED5010057BACE /* WASBindingTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD957F70162ED5010057BACE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = b5m;
+			};
+			buildConfigurationList = DD957F73162ED5010057BACE /* Build configuration list for PBXProject "WASBinding" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD957F6E162ED5010057BACE;
+			productRefGroup = DD957F7A162ED5010057BACE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD957F78162ED5010057BACE /* WASBinding */,
+				DD957F88162ED5010057BACE /* WASBindingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD957F86162ED5010057BACE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD957F97162ED5010057BACE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD957F87162ED5010057BACE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD957F75162ED5010057BACE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD1B0469163E8DF70014B204 /* WASBinding.m in Sources */,
+				DD1B046B163E8DF70014B204 /* WASBindingDefinition+WASBindingsLoadingMany.m in Sources */,
+				DD1B046D163E8DF70014B204 /* WASBindingDefinition.m in Sources */,
+				DD1B046F163E8DF70014B204 /* WASBindingOptions.m in Sources */,
+				DD1B0471163E8DF70014B204 /* WASBindingsSet.m in Sources */,
+				DD1B0473163E8DF70014B204 /* WASObservingTableSection.m in Sources */,
+				DD1B0475163E8DF70014B204 /* WASTableDataSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD957F84162ED5010057BACE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD957F9A162ED5010057BACE /* WASBindingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD957F90162ED5010057BACE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD957F78162ED5010057BACE /* WASBinding */;
+			targetProxy = DD957F8F162ED5010057BACE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD957F95162ED5010057BACE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD957F96162ED5010057BACE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD957F9B162ED5010057BACE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DD957F9C162ED5010057BACE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD957F9E162ED5010057BACE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WASBinding.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASBinding/WASBinding-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DD957F9F162ED5010057BACE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WASBinding.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASBinding/WASBinding-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DD957FA1162ED5010057BACE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASBinding/WASBinding-Prefix.pch";
+				INFOPLIST_FILE = "WASBindingTests/WASBindingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DD957FA2162ED5010057BACE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASBinding/WASBinding-Prefix.pch";
+				INFOPLIST_FILE = "WASBindingTests/WASBindingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD957F73162ED5010057BACE /* Build configuration list for PBXProject "WASBinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD957F9B162ED5010057BACE /* Debug */,
+				DD957F9C162ED5010057BACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD957F9D162ED5010057BACE /* Build configuration list for PBXNativeTarget "WASBinding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD957F9E162ED5010057BACE /* Debug */,
+				DD957F9F162ED5010057BACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD957FA0162ED5010057BACE /* Build configuration list for PBXNativeTarget "WASBindingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD957FA1162ED5010057BACE /* Debug */,
+				DD957FA2162ED5010057BACE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD957F70162ED5010057BACE /* Project object */;
+}

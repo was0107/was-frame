@@ -1,0 +1,11 @@
+//
+// Prefix header for all source files of the 'WASDebug' target in the 'WASDebug' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <QuartzCore/QuartzCore.h>
+    #import "WASSingleton.h"
+    #import "WASDebugUtility.h"
+    #import "NSObject+Ticker.h"
+#endif
