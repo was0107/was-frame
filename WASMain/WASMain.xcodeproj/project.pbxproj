@@ -100,9 +100,9 @@
 		6BE6F9A2151AA5E100D36392 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DD0C4AB016B7686A00CB9793 /* libBaseCommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBaseCommon.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos/libBaseCommon.a"; sourceTree = "<group>"; };
 		DD0C4AB116B7686A00CB9793 /* libWASBinding.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASBinding.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos/libWASBinding.a"; sourceTree = "<group>"; };
-		DD0C4AB216B7686A00CB9793 /* libWASDebug.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libWASDebug.a; path = "WASDebug/build/Release-iphoneos/libWASDebug.a"; sourceTree = "<group>"; };
-		DD0C4AB316B7686A00CB9793 /* libWASLayoutManager.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libWASLayoutManager.a; path = "WASLayoutManger/WASLayoutManager/build/Release-iphoneos/libWASLayoutManager.a"; sourceTree = "<group>"; };
-		DD0C4AB416B7686A00CB9793 /* libWASOperation.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libWASOperation.a; path = "WASOperation/build/Release-iphoneos/libWASOperation.a"; sourceTree = "<group>"; };
+		DD0C4AB216B7686A00CB9793 /* libWASDebug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASDebug.a; path = "WASDebug/build/Release-iphoneos/libWASDebug.a"; sourceTree = "<group>"; };
+		DD0C4AB316B7686A00CB9793 /* libWASLayoutManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASLayoutManager.a; path = "WASLayoutManger/WASLayoutManager/build/Release-iphoneos/libWASLayoutManager.a"; sourceTree = "<group>"; };
+		DD0C4AB416B7686A00CB9793 /* libWASOperation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASOperation.a; path = "WASOperation/build/Release-iphoneos/libWASOperation.a"; sourceTree = "<group>"; };
 		DD0C4AB516B7686A00CB9793 /* libWASUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASUtility.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos/libWASUtility.a"; sourceTree = "<group>"; };
 		DD0C4AC616B76A5A00CB9793 /* DetailViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerViewController.h; sourceTree = "<group>"; };
 		DD0C4AC716B76A5A00CB9793 /* DetailViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerViewController.m; sourceTree = "<group>"; };
@@ -666,8 +666,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: allen wang (9HB27QZ53G)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: allen wang (9HB27QZ53G)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WASMain/WASMain-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -678,8 +678,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0B7848CE-BEC4-4F8C-BF10-D6B03A34D15E";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0B7848CE-BEC4-4F8C-BF10-D6B03A34D15E";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "BaseCommon/** WASLayoutManger/** WASBinding/** WASUtility/** WASDebug/**";
 				WRAPPER_EXTENSION = app;
@@ -690,7 +690,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: allen wang (9HB27QZ53G)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WASMain/WASMain-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -701,7 +702,8 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0B7848CE-BEC4-4F8C-BF10-D6B03A34D15E";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "BaseCommon/** WASLayoutManger/** WASBinding/** WASUtility/** WASDebug/**";
 				WRAPPER_EXTENSION = app;

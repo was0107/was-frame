@@ -2,7 +2,7 @@
 //  Binding.m
 //   RssReader
 //
-//  Created by 営業支援開発機 on 10/12/24.
+//  Created by allen.wang on 10/12/24.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
