@@ -25,7 +25,6 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
     self.tableView = [[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain] autorelease ];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
     [self.view addSubview:self.tableView];
 	// Do any additional setup after loading the view, typically from a nib.
 }

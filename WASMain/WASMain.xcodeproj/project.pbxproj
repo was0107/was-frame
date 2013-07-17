@@ -44,6 +44,8 @@
 		DD1E2A0115AFF6A20093D256 /* WASFullScreenScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1E2A0015AFF6A20093D256 /* WASFullScreenScroll.m */; };
 		DD7E0B4915AEB1300072A6AD /* WASEXTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E0B4815AEB1300072A6AD /* WASEXTableView.m */; };
 		DD7E0B5915AEBCC30072A6AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7E0B5815AEBCC30072A6AD /* QuartzCore.framework */; };
+		DDA5FBB5179696EC000A1AFF /* libWASControllerCard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5FBB4179696EC000A1AFF /* libWASControllerCard.a */; };
+		DDA5FBB81796973E000A1AFF /* TestCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA5FBB71796973E000A1AFF /* TestCardViewController.m */; };
 		DDB8E90015AAA2A000C406A1 /* DetailViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB8E8FF15AAA2A000C406A1 /* DetailViewController_iPhone.m */; };
 		DDB8E90715AAA3AE00C406A1 /* HomePageViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB8E90615AAA3AE00C406A1 /* HomePageViewController_iPhone.m */; };
 		DDB8E97115AAB8B600C406A1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB8E97015AAB8B600C406A1 /* WebViewController.m */; };
@@ -127,6 +129,9 @@
 		DD7E0B4715AEB1300072A6AD /* WASEXTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASEXTableView.h; sourceTree = "<group>"; };
 		DD7E0B4815AEB1300072A6AD /* WASEXTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASEXTableView.m; sourceTree = "<group>"; };
 		DD7E0B5815AEBCC30072A6AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DDA5FBB4179696EC000A1AFF /* libWASControllerCard.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libWASControllerCard.a; path = "WASControllerCard/build/Release-iphoneos/libWASControllerCard.a"; sourceTree = "<group>"; };
+		DDA5FBB61796973E000A1AFF /* TestCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCardViewController.h; sourceTree = "<group>"; };
+		DDA5FBB71796973E000A1AFF /* TestCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCardViewController.m; sourceTree = "<group>"; };
 		DDB8E8FE15AAA2A000C406A1 /* DetailViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController_iPhone.h; sourceTree = "<group>"; };
 		DDB8E8FF15AAA2A000C406A1 /* DetailViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController_iPhone.m; sourceTree = "<group>"; };
 		DDB8E90515AAA3AE00C406A1 /* HomePageViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController_iPhone.h; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA5FBB5179696EC000A1AFF /* libWASControllerCard.a in Frameworks */,
 				DD0C4AB616B7686A00CB9793 /* libBaseCommon.a in Frameworks */,
 				DD0C4AB716B7686A00CB9793 /* libWASBinding.a in Frameworks */,
 				DD0C4AB816B7686A00CB9793 /* libWASDebug.a in Frameworks */,
@@ -280,6 +286,7 @@
 		6BE6F8AF151A845000D36392 /* WASMain */ = {
 			isa = PBXGroup;
 			children = (
+				DDA5FBB3179696C1000A1AFF /* TestEvernote */,
 				DD0C4ACD16B76C6200CB9793 /* TestBinding */,
 				DD0C4ABD16B769F200CB9793 /* TestLayout */,
 				DDEA922A15D20C100013BAFD /* WASAVCamera */,
@@ -322,6 +329,7 @@
 		DD0C4ABC16B769BD00CB9793 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				DDA5FBB4179696EC000A1AFF /* libWASControllerCard.a */,
 				DD0C4AB016B7686A00CB9793 /* libBaseCommon.a */,
 				DD0C4AB116B7686A00CB9793 /* libWASBinding.a */,
 				DD0C4AB216B7686A00CB9793 /* libWASDebug.a */,
@@ -384,6 +392,15 @@
 				DD1E2A0015AFF6A20093D256 /* WASFullScreenScroll.m */,
 			);
 			name = widget;
+			sourceTree = "<group>";
+		};
+		DDA5FBB3179696C1000A1AFF /* TestEvernote */ = {
+			isa = PBXGroup;
+			children = (
+				DDA5FBB61796973E000A1AFF /* TestCardViewController.h */,
+				DDA5FBB71796973E000A1AFF /* TestCardViewController.m */,
+			);
+			path = TestEvernote;
 			sourceTree = "<group>";
 		};
 		DDB8E90115AAA36B00C406A1 /* HomePage */ = {
@@ -584,6 +601,7 @@
 				DD0C4AC916B76A5A00CB9793 /* DetailViewControllerViewController.m in Sources */,
 				DD0C4ACC16B76B3B00CB9793 /* TestLayoutViewController.m in Sources */,
 				DD0C4AD116B76C6200CB9793 /* TestBindingViewController.m in Sources */,
+				DDA5FBB81796973E000A1AFF /* TestCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,7 +699,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "BaseCommon/** WASLayoutManger/** WASBinding/** WASUtility/** WASDebug/**";
+				USER_HEADER_SEARCH_PATHS = "BaseCommon/** WASLayoutManger/** WASBinding/** WASUtility/** WASDebug/** WASControllerCard/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -705,7 +723,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "BaseCommon/** WASLayoutManger/** WASBinding/** WASUtility/** WASDebug/**";
+				USER_HEADER_SEARCH_PATHS = "BaseCommon/** WASLayoutManger/** WASBinding/** WASUtility/** WASDebug/** WASControllerCard/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

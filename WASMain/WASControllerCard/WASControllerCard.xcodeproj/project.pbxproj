@@ -11,11 +11,12 @@
 		DD40E04D1795659000EEFB09 /* WASControllerCard.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DD40E04C1795659000EEFB09 /* WASControllerCard.h */; };
 		DD40E04F1795659000EEFB09 /* WASControllerCard.m in Sources */ = {isa = PBXBuildFile; fileRef = DD40E04E1795659000EEFB09 /* WASControllerCard.m */; };
 		DD40E0571795659000EEFB09 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD40E0561795659000EEFB09 /* SenTestingKit.framework */; };
-		DD40E0591795659000EEFB09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD40E0581795659000EEFB09 /* UIKit.framework */; };
 		DD40E05A1795659000EEFB09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD40E0471795659000EEFB09 /* Foundation.framework */; };
 		DD40E05D1795659000EEFB09 /* libWASControllerCard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD40E0441795659000EEFB09 /* libWASControllerCard.a */; };
 		DD40E0631795659000EEFB09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD40E0611795659000EEFB09 /* InfoPlist.strings */; };
 		DD40E0661795659000EEFB09 /* WASControllerCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD40E0651795659000EEFB09 /* WASControllerCardTests.m */; };
+		DDA5FBB017964C0F000A1AFF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5FBAF17964C0F000A1AFF /* UIKit.framework */; };
+		DDA5FBB217964C5D000A1AFF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5FBB117964C5D000A1AFF /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +50,12 @@
 		DD40E04E1795659000EEFB09 /* WASControllerCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASControllerCard.m; sourceTree = "<group>"; };
 		DD40E0551795659000EEFB09 /* WASControllerCardTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WASControllerCardTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD40E0561795659000EEFB09 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		DD40E0581795659000EEFB09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DD40E0601795659000EEFB09 /* WASControllerCardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WASControllerCardTests-Info.plist"; sourceTree = "<group>"; };
 		DD40E0621795659000EEFB09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD40E0641795659000EEFB09 /* WASControllerCardTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASControllerCardTests.h; sourceTree = "<group>"; };
 		DD40E0651795659000EEFB09 /* WASControllerCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASControllerCardTests.m; sourceTree = "<group>"; };
+		DDA5FBAF17964C0F000A1AFF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DDA5FBB117964C5D000A1AFF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA5FBB217964C5D000A1AFF /* QuartzCore.framework in Frameworks */,
+				DDA5FBB017964C0F000A1AFF /* UIKit.framework in Frameworks */,
 				DD40E0481795659000EEFB09 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +74,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD40E0571795659000EEFB09 /* SenTestingKit.framework in Frameworks */,
-				DD40E0591795659000EEFB09 /* UIKit.framework in Frameworks */,
 				DD40E05A1795659000EEFB09 /* Foundation.framework in Frameworks */,
 				DD40E05D1795659000EEFB09 /* libWASControllerCard.a in Frameworks */,
 			);
@@ -101,9 +104,10 @@
 		DD40E0461795659000EEFB09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DDA5FBB117964C5D000A1AFF /* QuartzCore.framework */,
+				DDA5FBAF17964C0F000A1AFF /* UIKit.framework */,
 				DD40E0471795659000EEFB09 /* Foundation.framework */,
 				DD40E0561795659000EEFB09 /* SenTestingKit.framework */,
-				DD40E0581795659000EEFB09 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -300,7 +304,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -322,7 +326,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -401,6 +405,7 @@
 				DD40E06B1795659000EEFB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD40E06C1795659000EEFB09 /* Build configuration list for PBXNativeTarget "WASControllerCardTests" */ = {
 			isa = XCConfigurationList;
@@ -409,6 +414,7 @@
 				DD40E06E1795659000EEFB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

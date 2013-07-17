@@ -8,13 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-
 typedef enum {
-    WASControllerCardStateDefault;
-    WASControllerCardStateFullScreen;
-    WASControllerCardStateHiddenBottom;
-    WASControllerCardStateHideenTop;
-}WASControllerCardState;
+    WASControllerCardStateDefault,
+    WASControllerCardStateFullScreen,
+    WASControllerCardStateHiddenBottom,
+    WASControllerCardStateHiddenTop
+} WASControllerCardState;
 
 @class WASControllerCard;
 @class WASCardViewController;
@@ -42,16 +41,17 @@ typedef enum {
     CGFloat     _scalingFactor;
     NSInteger   _index;
 }
-@property (nonatomic, assign) UINavigationController    *navigationController;
-@property (nonatomic, assign) WASCardViewController     *cardController;
-@property (nonatomic, assign) id<WASControllerCardDelegate>    *delegate;
-@property (nonatomic, assign) CGPoint                   *origin;
-@property (nonatomic, assign) CGFloat                   *panOriginOffsetY;
+@property (nonatomic, retain) UINavigationController    *navigationController;
+@property (nonatomic, retain) WASCardViewController     *cardController;
+@property (nonatomic, assign) CGPoint                   origin;
+@property (nonatomic, assign) CGFloat                   panOriginOffsetY;
 @property (nonatomic, assign) WASControllerCardState    state;
+@property (nonatomic, assign) id<WASControllerCardDelegate>   delegate;
+
 
 - (id) initWithController:(WASCardViewController *) controller navigationController:(UINavigationController *) navigationController index:(NSInteger) index;
 
-- (void) setState:(WASControllerCard)state animated:(BOOL) animated;
+- (void) setState:(WASControllerCardState) state animated:(BOOL) animated;
 
 - (void) setYCoordinate:(CGFloat) yValue;
 
@@ -61,25 +61,44 @@ typedef enum {
 
 
 
-
-
 #pragma mark ==
 #pragma mark WASCardViewController
 
-@interface WASCardViewController : UIViewController
+@interface WASCardViewController : UIViewController<WASControllerCardDelegate>
+{
+    NSInteger _totalCards;
+}
+@property (nonatomic, assign) id<WASCardViewControllerDelegate>   delegate;
+@property (nonatomic, assign) id<WASCardViewControllerDatasource> dataSource;
+@property (nonatomic, retain) NSArray *controllerCards;
+
+- (void) reloadData;
+
+- (NSInteger) numberOfControllerCardsInController:(WASCardViewController *) controller;
+
+- (UIViewController *) controller:(WASCardViewController *) controller viewControllerAtIndex:(NSUInteger) index;
+
+- (NSUInteger ) indexForControllerCard:(WASControllerCard *) controllerCard;
+
+- (void) controller:(WASCardViewController *) controller didUpdateControllerCard:(WASControllerCard*)controllerCard toState:(WASControllerCardState) toState fromState:(WASControllerCardState) fromState;
 
 @end
 
 
 
 @protocol WASCardViewControllerDelegate <NSObject>
+@optional
 
-
+- (void) controller:(WASCardViewController *) controller didUpdateControllerCard:(WASControllerCard*)controllerCard toState:(WASControllerCardState) toState fromState:(WASControllerCardState) fromState;
 
 @end
 
 
 @protocol WASCardViewControllerDatasource <NSObject>
+@required
 
+- (NSInteger) numberOfControllerCardsInController:(WASCardViewController *) controller;
+
+- (UIViewController *) controller:(WASCardViewController *) controller viewControllerAtIndex:(NSInteger) index;
 
 @end

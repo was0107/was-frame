@@ -19,6 +19,7 @@
         
         UIBarButtonItem *item = [[[UIBarButtonItem alloc] initWithTitle:@"refresh" style:UIButtonTypeInfoDark target:self action:@selector(refresh:)] autorelease];
         self.navigationItem.rightBarButtonItem = item;
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }

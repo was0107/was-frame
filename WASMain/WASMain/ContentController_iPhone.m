@@ -20,12 +20,13 @@
 {
     self = [super init];
     if (self) {
-        // Initialization code here.
-        Class main = NSClassFromString(@"TestLayoutViewController");
+        // Initialization code here. 
+//        Class main = NSClassFromString(@"TestLayoutViewController");
+        Class main = NSClassFromString(@"TestCardViewController");
         mainViewController_   = [[main alloc] init];
-        navigationController_ = [[UINavigationController alloc] initWithRootViewController:mainViewController_];
-        navigationController_.hidesBottomBarWhenPushed = NO;
-        [navigationController_ setNavigationBarHidden:NO animated:YES];
+//        navigationController_ = [[UINavigationController alloc] initWithRootViewController:mainViewController_];
+//        navigationController_.hidesBottomBarWhenPushed = NO;
+//        [navigationController_ setNavigationBarHidden:NO animated:YES];
     }
     
     return self;
@@ -41,7 +42,7 @@
 
 - (UIView *)view
 {
-    return self.navigationController.view;
+    return self.mainViewController.view;
 }
 
 @end
