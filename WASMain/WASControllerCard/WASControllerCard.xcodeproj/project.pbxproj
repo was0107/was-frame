@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD40E0481795659000EEFB09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD40E0471795659000EEFB09 /* Foundation.framework */; };
+		DD40E04D1795659000EEFB09 /* WASControllerCard.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DD40E04C1795659000EEFB09 /* WASControllerCard.h */; };
+		DD40E04F1795659000EEFB09 /* WASControllerCard.m in Sources */ = {isa = PBXBuildFile; fileRef = DD40E04E1795659000EEFB09 /* WASControllerCard.m */; };
+		DD40E0571795659000EEFB09 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD40E0561795659000EEFB09 /* SenTestingKit.framework */; };
+		DD40E0591795659000EEFB09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD40E0581795659000EEFB09 /* UIKit.framework */; };
+		DD40E05A1795659000EEFB09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD40E0471795659000EEFB09 /* Foundation.framework */; };
+		DD40E05D1795659000EEFB09 /* libWASControllerCard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD40E0441795659000EEFB09 /* libWASControllerCard.a */; };
+		DD40E0631795659000EEFB09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD40E0611795659000EEFB09 /* InfoPlist.strings */; };
+		DD40E0661795659000EEFB09 /* WASControllerCardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD40E0651795659000EEFB09 /* WASControllerCardTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD40E05B1795659000EEFB09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD40E03C1795659000EEFB09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD40E0431795659000EEFB09;
+			remoteInfo = WASControllerCard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DD40E0421795659000EEFB09 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				DD40E04D1795659000EEFB09 /* WASControllerCard.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DD40E0441795659000EEFB09 /* libWASControllerCard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libWASControllerCard.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD40E0471795659000EEFB09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD40E04B1795659000EEFB09 /* WASControllerCard-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WASControllerCard-Prefix.pch"; sourceTree = "<group>"; };
+		DD40E04C1795659000EEFB09 /* WASControllerCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASControllerCard.h; sourceTree = "<group>"; };
+		DD40E04E1795659000EEFB09 /* WASControllerCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASControllerCard.m; sourceTree = "<group>"; };
+		DD40E0551795659000EEFB09 /* WASControllerCardTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WASControllerCardTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD40E0561795659000EEFB09 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DD40E0581795659000EEFB09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DD40E0601795659000EEFB09 /* WASControllerCardTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WASControllerCardTests-Info.plist"; sourceTree = "<group>"; };
+		DD40E0621795659000EEFB09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD40E0641795659000EEFB09 /* WASControllerCardTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WASControllerCardTests.h; sourceTree = "<group>"; };
+		DD40E0651795659000EEFB09 /* WASControllerCardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WASControllerCardTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD40E0411795659000EEFB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD40E0481795659000EEFB09 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD40E0511795659000EEFB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD40E0571795659000EEFB09 /* SenTestingKit.framework in Frameworks */,
+				DD40E0591795659000EEFB09 /* UIKit.framework in Frameworks */,
+				DD40E05A1795659000EEFB09 /* Foundation.framework in Frameworks */,
+				DD40E05D1795659000EEFB09 /* libWASControllerCard.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD40E03B1795659000EEFB09 = {
+			isa = PBXGroup;
+			children = (
+				DD40E0491795659000EEFB09 /* WASControllerCard */,
+				DD40E05E1795659000EEFB09 /* WASControllerCardTests */,
+				DD40E0461795659000EEFB09 /* Frameworks */,
+				DD40E0451795659000EEFB09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD40E0451795659000EEFB09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD40E0441795659000EEFB09 /* libWASControllerCard.a */,
+				DD40E0551795659000EEFB09 /* WASControllerCardTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD40E0461795659000EEFB09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD40E0471795659000EEFB09 /* Foundation.framework */,
+				DD40E0561795659000EEFB09 /* SenTestingKit.framework */,
+				DD40E0581795659000EEFB09 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD40E0491795659000EEFB09 /* WASControllerCard */ = {
+			isa = PBXGroup;
+			children = (
+				DD40E04C1795659000EEFB09 /* WASControllerCard.h */,
+				DD40E04E1795659000EEFB09 /* WASControllerCard.m */,
+				DD40E04A1795659000EEFB09 /* Supporting Files */,
+			);
+			path = WASControllerCard;
+			sourceTree = "<group>";
+		};
+		DD40E04A1795659000EEFB09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD40E04B1795659000EEFB09 /* WASControllerCard-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DD40E05E1795659000EEFB09 /* WASControllerCardTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD40E0641795659000EEFB09 /* WASControllerCardTests.h */,
+				DD40E0651795659000EEFB09 /* WASControllerCardTests.m */,
+				DD40E05F1795659000EEFB09 /* Supporting Files */,
+			);
+			path = WASControllerCardTests;
+			sourceTree = "<group>";
+		};
+		DD40E05F1795659000EEFB09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD40E0601795659000EEFB09 /* WASControllerCardTests-Info.plist */,
+				DD40E0611795659000EEFB09 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD40E0431795659000EEFB09 /* WASControllerCard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD40E0691795659000EEFB09 /* Build configuration list for PBXNativeTarget "WASControllerCard" */;
+			buildPhases = (
+				DD40E0401795659000EEFB09 /* Sources */,
+				DD40E0411795659000EEFB09 /* Frameworks */,
+				DD40E0421795659000EEFB09 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WASControllerCard;
+			productName = WASControllerCard;
+			productReference = DD40E0441795659000EEFB09 /* libWASControllerCard.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DD40E0541795659000EEFB09 /* WASControllerCardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD40E06C1795659000EEFB09 /* Build configuration list for PBXNativeTarget "WASControllerCardTests" */;
+			buildPhases = (
+				DD40E0501795659000EEFB09 /* Sources */,
+				DD40E0511795659000EEFB09 /* Frameworks */,
+				DD40E0521795659000EEFB09 /* Resources */,
+				DD40E0531795659000EEFB09 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD40E05C1795659000EEFB09 /* PBXTargetDependency */,
+			);
+			name = WASControllerCardTests;
+			productName = WASControllerCardTests;
+			productReference = DD40E0551795659000EEFB09 /* WASControllerCardTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD40E03C1795659000EEFB09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = allen.wang;
+			};
+			buildConfigurationList = DD40E03F1795659000EEFB09 /* Build configuration list for PBXProject "WASControllerCard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD40E03B1795659000EEFB09;
+			productRefGroup = DD40E0451795659000EEFB09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD40E0431795659000EEFB09 /* WASControllerCard */,
+				DD40E0541795659000EEFB09 /* WASControllerCardTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD40E0521795659000EEFB09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD40E0631795659000EEFB09 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD40E0531795659000EEFB09 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD40E0401795659000EEFB09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD40E04F1795659000EEFB09 /* WASControllerCard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD40E0501795659000EEFB09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD40E0661795659000EEFB09 /* WASControllerCardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD40E05C1795659000EEFB09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD40E0431795659000EEFB09 /* WASControllerCard */;
+			targetProxy = DD40E05B1795659000EEFB09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD40E0611795659000EEFB09 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD40E0621795659000EEFB09 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD40E0671795659000EEFB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DD40E0681795659000EEFB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD40E06A1795659000EEFB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WASControllerCard.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASControllerCard/WASControllerCard-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DD40E06B1795659000EEFB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/WASControllerCard.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASControllerCard/WASControllerCard-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		DD40E06D1795659000EEFB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASControllerCard/WASControllerCard-Prefix.pch";
+				INFOPLIST_FILE = "WASControllerCardTests/WASControllerCardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DD40E06E1795659000EEFB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WASControllerCard/WASControllerCard-Prefix.pch";
+				INFOPLIST_FILE = "WASControllerCardTests/WASControllerCardTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD40E03F1795659000EEFB09 /* Build configuration list for PBXProject "WASControllerCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD40E0671795659000EEFB09 /* Debug */,
+				DD40E0681795659000EEFB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD40E0691795659000EEFB09 /* Build configuration list for PBXNativeTarget "WASControllerCard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD40E06A1795659000EEFB09 /* Debug */,
+				DD40E06B1795659000EEFB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DD40E06C1795659000EEFB09 /* Build configuration list for PBXNativeTarget "WASControllerCardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD40E06D1795659000EEFB09 /* Debug */,
+				DD40E06E1795659000EEFB09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD40E03C1795659000EEFB09 /* Project object */;
+}
