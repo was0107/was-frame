@@ -7,6 +7,7 @@
 //
 
 #import "TestCardViewController.h"
+#import "TestLayoutViewController.h"
 
 @interface TestCardViewController ()
 
@@ -29,7 +30,7 @@
 - (UIViewController *) controller:(WASCardViewController *) controller viewControllerAtIndex:(NSUInteger) index
 {
     Class main = NSClassFromString(@"TestLayoutViewController");
-    UIViewController *result   = [[[main alloc] init] autorelease];
+    TestLayoutViewController *result   = [[[main alloc] init] autorelease];
     result.view.backgroundColor = [UIColor redColor];
     result.view.bounds = self.view.bounds;
     return result;

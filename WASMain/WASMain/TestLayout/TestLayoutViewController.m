@@ -9,14 +9,18 @@
 #import "TestLayoutViewController.h"
 #import "DetailViewControllerViewController.h"
 static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"表格布局",@"盒式布局",@"嵌套布局"};
+static CGFloat maxPositionY = -40.0f;
 
-
-@interface TestLayoutViewController ()<UITableViewDataSource,UITableViewDelegate>
-
+@interface TestLayoutViewController ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>
+{
+    ;
+}
+@property (nonatomic, retain) UIPanGestureRecognizer* panGesture;
 @end
 
 @implementation TestLayoutViewController
 @synthesize tableView = _tableView;
+@synthesize panGesture = _panGesture;
 
 - (void)viewDidLoad
 {
@@ -26,13 +30,13 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{    
+    if (maxPositionY >= scrollView.contentOffset.y) {
+        [self.tableView setContentOffset:CGPointMake(0, maxPositionY)];
+    }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -115,5 +119,4 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
             break;
     }
 }
-
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class UIEveNoteTableView;
 
 @interface TestLayoutViewController : UIViewController
 @property(nonatomic, retain) UITableView *tableView;

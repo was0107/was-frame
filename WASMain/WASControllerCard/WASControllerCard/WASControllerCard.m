@@ -28,7 +28,7 @@
 
 
 
-@interface WASCardViewController()
+@interface WASCardViewController()<UIGestureRecognizerDelegate>
 
 - (CGFloat) defaultVerticalOriginForControllerCard: (WASControllerCard*) controllerCard atIndex:(NSUInteger) index;
 
@@ -231,6 +231,7 @@
         [self.navigationController.view setClipsToBounds:YES];
         
         UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPerformPanGesture:)];
+//        panGesture.delegate = self;
         UILongPressGestureRecognizer* pressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didPerformLongPress:)];
         [pressGesture setMinimumPressDuration: kDefaultMinimumPressDuration];
         [self.navigationController.navigationBar addGestureRecognizer: panGesture];
@@ -399,6 +400,21 @@
         return point.y > -self.navigationController.navigationBar.frame.size.height;
     }
     return NO;
+}
+
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    return YES;
+}
+
+// called when the recognition of one of gestureRecognizer or otherGestureRecognizer would be blocked by the other
+// return YES to allow both to recognize simultaneously. the default implementation returns NO (by default no two gestures can be recognized simultaneously)
+//
+// note: returning YES is guaranteed to allow simultaneous recognition. returning NO is not guaranteed to prevent simultaneous recognition, as the other gesture's delegate may return YES
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return NO;// gestureRecognizer == otherGestureRecognizer;
 }
 
 @end
