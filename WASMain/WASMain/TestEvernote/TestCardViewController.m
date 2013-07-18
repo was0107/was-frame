@@ -23,7 +23,7 @@
 
 - (NSInteger) numberOfControllerCardsInController:(WASCardViewController *) controller
 {
-    return 5;
+    return 4;
 }
 
 - (UIViewController *) controller:(WASCardViewController *) controller viewControllerAtIndex:(NSUInteger) index

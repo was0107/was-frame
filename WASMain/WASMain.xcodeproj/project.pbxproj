@@ -23,9 +23,6 @@
 		6BE6F9A3151AA5E100D36392 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE6F9A2151AA5E100D36392 /* SystemConfiguration.framework */; };
 		DD0C4AB616B7686A00CB9793 /* libBaseCommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0C4AB016B7686A00CB9793 /* libBaseCommon.a */; };
 		DD0C4AB716B7686A00CB9793 /* libWASBinding.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0C4AB116B7686A00CB9793 /* libWASBinding.a */; };
-		DD0C4AB816B7686A00CB9793 /* libWASDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0C4AB216B7686A00CB9793 /* libWASDebug.a */; };
-		DD0C4AB916B7686A00CB9793 /* libWASLayoutManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0C4AB316B7686A00CB9793 /* libWASLayoutManager.a */; };
-		DD0C4ABA16B7686A00CB9793 /* libWASOperation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0C4AB416B7686A00CB9793 /* libWASOperation.a */; };
 		DD0C4ABB16B7686A00CB9793 /* libWASUtility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD0C4AB516B7686A00CB9793 /* libWASUtility.a */; };
 		DD0C4AC916B76A5A00CB9793 /* DetailViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0C4AC716B76A5A00CB9793 /* DetailViewControllerViewController.m */; };
 		DD0C4ACC16B76B3B00CB9793 /* TestLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD0C4ACA16B76B3B00CB9793 /* TestLayoutViewController.m */; };
@@ -44,8 +41,12 @@
 		DD1E2A0115AFF6A20093D256 /* WASFullScreenScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = DD1E2A0015AFF6A20093D256 /* WASFullScreenScroll.m */; };
 		DD7E0B4915AEB1300072A6AD /* WASEXTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7E0B4815AEB1300072A6AD /* WASEXTableView.m */; };
 		DD7E0B5915AEBCC30072A6AD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7E0B5815AEBCC30072A6AD /* QuartzCore.framework */; };
-		DDA5FBB5179696EC000A1AFF /* libWASControllerCard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5FBB4179696EC000A1AFF /* libWASControllerCard.a */; };
 		DDA5FBB81796973E000A1AFF /* TestCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA5FBB71796973E000A1AFF /* TestCardViewController.m */; };
+		DDA5FBBA1796D020000A1AFF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDA5FBB91796D020000A1AFF /* Default-568h@2x.png */; };
+		DDA5FBBC1796D144000A1AFF /* libWASControllerCard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5FBBB1796D144000A1AFF /* libWASControllerCard.a */; };
+		DDA5FBC01796D15E000A1AFF /* libWASDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5FBBD1796D15D000A1AFF /* libWASDebug.a */; };
+		DDA5FBC11796D15E000A1AFF /* libWASLayoutManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5FBBE1796D15D000A1AFF /* libWASLayoutManager.a */; };
+		DDA5FBC21796D15E000A1AFF /* libWASOperation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDA5FBBF1796D15E000A1AFF /* libWASOperation.a */; };
 		DDB8E90015AAA2A000C406A1 /* DetailViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB8E8FF15AAA2A000C406A1 /* DetailViewController_iPhone.m */; };
 		DDB8E90715AAA3AE00C406A1 /* HomePageViewController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB8E90615AAA3AE00C406A1 /* HomePageViewController_iPhone.m */; };
 		DDB8E97115AAB8B600C406A1 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB8E97015AAB8B600C406A1 /* WebViewController.m */; };
@@ -102,9 +103,6 @@
 		6BE6F9A2151AA5E100D36392 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DD0C4AB016B7686A00CB9793 /* libBaseCommon.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBaseCommon.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos/libBaseCommon.a"; sourceTree = "<group>"; };
 		DD0C4AB116B7686A00CB9793 /* libWASBinding.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASBinding.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos/libWASBinding.a"; sourceTree = "<group>"; };
-		DD0C4AB216B7686A00CB9793 /* libWASDebug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASDebug.a; path = "WASDebug/build/Release-iphoneos/libWASDebug.a"; sourceTree = "<group>"; };
-		DD0C4AB316B7686A00CB9793 /* libWASLayoutManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASLayoutManager.a; path = "WASLayoutManger/WASLayoutManager/build/Release-iphoneos/libWASLayoutManager.a"; sourceTree = "<group>"; };
-		DD0C4AB416B7686A00CB9793 /* libWASOperation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASOperation.a; path = "WASOperation/build/Release-iphoneos/libWASOperation.a"; sourceTree = "<group>"; };
 		DD0C4AB516B7686A00CB9793 /* libWASUtility.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASUtility.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos/libWASUtility.a"; sourceTree = "<group>"; };
 		DD0C4AC616B76A5A00CB9793 /* DetailViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerViewController.h; sourceTree = "<group>"; };
 		DD0C4AC716B76A5A00CB9793 /* DetailViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewControllerViewController.m; sourceTree = "<group>"; };
@@ -129,9 +127,13 @@
 		DD7E0B4715AEB1300072A6AD /* WASEXTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WASEXTableView.h; sourceTree = "<group>"; };
 		DD7E0B4815AEB1300072A6AD /* WASEXTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WASEXTableView.m; sourceTree = "<group>"; };
 		DD7E0B5815AEBCC30072A6AD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		DDA5FBB4179696EC000A1AFF /* libWASControllerCard.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libWASControllerCard.a; path = "WASControllerCard/build/Release-iphoneos/libWASControllerCard.a"; sourceTree = "<group>"; };
 		DDA5FBB61796973E000A1AFF /* TestCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCardViewController.h; sourceTree = "<group>"; };
 		DDA5FBB71796973E000A1AFF /* TestCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCardViewController.m; sourceTree = "<group>"; };
+		DDA5FBB91796D020000A1AFF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../Default-568h@2x.png"; sourceTree = "<group>"; };
+		DDA5FBBB1796D144000A1AFF /* libWASControllerCard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASControllerCard.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-cfnkthysunfajbcxnqdwsyoxqtpk/Build/Products/Debug-iphoneos/libWASControllerCard.a"; sourceTree = "<group>"; };
+		DDA5FBBD1796D15D000A1AFF /* libWASDebug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASDebug.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-cfnkthysunfajbcxnqdwsyoxqtpk/Build/Products/Debug-iphoneos/libWASDebug.a"; sourceTree = "<group>"; };
+		DDA5FBBE1796D15D000A1AFF /* libWASLayoutManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASLayoutManager.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-cfnkthysunfajbcxnqdwsyoxqtpk/Build/Products/Debug-iphoneos/libWASLayoutManager.a"; sourceTree = "<group>"; };
+		DDA5FBBF1796D15E000A1AFF /* libWASOperation.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWASOperation.a; path = "../../../Library/Developer/Xcode/DerivedData/Main-cfnkthysunfajbcxnqdwsyoxqtpk/Build/Products/Debug-iphoneos/libWASOperation.a"; sourceTree = "<group>"; };
 		DDB8E8FE15AAA2A000C406A1 /* DetailViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController_iPhone.h; sourceTree = "<group>"; };
 		DDB8E8FF15AAA2A000C406A1 /* DetailViewController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController_iPhone.m; sourceTree = "<group>"; };
 		DDB8E90515AAA3AE00C406A1 /* HomePageViewController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController_iPhone.h; sourceTree = "<group>"; };
@@ -193,12 +195,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA5FBB5179696EC000A1AFF /* libWASControllerCard.a in Frameworks */,
+				DDA5FBC01796D15E000A1AFF /* libWASDebug.a in Frameworks */,
+				DDA5FBC11796D15E000A1AFF /* libWASLayoutManager.a in Frameworks */,
+				DDA5FBC21796D15E000A1AFF /* libWASOperation.a in Frameworks */,
+				DDA5FBBC1796D144000A1AFF /* libWASControllerCard.a in Frameworks */,
 				DD0C4AB616B7686A00CB9793 /* libBaseCommon.a in Frameworks */,
 				DD0C4AB716B7686A00CB9793 /* libWASBinding.a in Frameworks */,
-				DD0C4AB816B7686A00CB9793 /* libWASDebug.a in Frameworks */,
-				DD0C4AB916B7686A00CB9793 /* libWASLayoutManager.a in Frameworks */,
-				DD0C4ABA16B7686A00CB9793 /* libWASOperation.a in Frameworks */,
 				DD0C4ABB16B7686A00CB9793 /* libWASUtility.a in Frameworks */,
 				DDCD5D5915D8CC86006897C1 /* MobileCoreServices.framework in Frameworks */,
 				DDEA924615D22A6A0013BAFD /* AssetsLibrary.framework in Frameworks */,
@@ -329,12 +331,12 @@
 		DD0C4ABC16B769BD00CB9793 /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				DDA5FBB4179696EC000A1AFF /* libWASControllerCard.a */,
+				DDA5FBBD1796D15D000A1AFF /* libWASDebug.a */,
+				DDA5FBBE1796D15D000A1AFF /* libWASLayoutManager.a */,
+				DDA5FBBF1796D15E000A1AFF /* libWASOperation.a */,
+				DDA5FBBB1796D144000A1AFF /* libWASControllerCard.a */,
 				DD0C4AB016B7686A00CB9793 /* libBaseCommon.a */,
 				DD0C4AB116B7686A00CB9793 /* libWASBinding.a */,
-				DD0C4AB216B7686A00CB9793 /* libWASDebug.a */,
-				DD0C4AB316B7686A00CB9793 /* libWASLayoutManager.a */,
-				DD0C4AB416B7686A00CB9793 /* libWASOperation.a */,
 				DD0C4AB516B7686A00CB9793 /* libWASUtility.a */,
 			);
 			name = libs;
@@ -364,6 +366,7 @@
 		DD191D98165C9D7E008E971D /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				DDA5FBB91796D020000A1AFF /* Default-568h@2x.png */,
 				DD191D99165C9D7E008E971D /* bug@2x.png */,
 				DD191D9A165C9D7E008E971D /* close@2x.png */,
 				DD191D9B165C9D7E008E971D /* file@2x.png */,
@@ -556,6 +559,7 @@
 				DD191D9F165C9D7E008E971D /* file@2x.png in Resources */,
 				DD191DA0165C9D7E008E971D /* folder@2x.png in Resources */,
 				DD0C4AD216B76C6200CB9793 /* TestBindingViewController.xib in Resources */,
+				DDA5FBBA1796D020000A1AFF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,9 +694,11 @@
 				GCC_PREFIX_HEADER = "WASMain/WASMain-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "WASMain/WASMain-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Main-cfnkthysunfajbcxnqdwsyoxqtpk/Build/Products/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -714,9 +720,11 @@
 				GCC_PREFIX_HEADER = "WASMain/WASMain-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "WASMain/WASMain-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos\"",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Main-cfnkthysunfajbcxnqdwsyoxqtpk/Build/Products/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";

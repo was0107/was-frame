@@ -11,7 +11,7 @@
 
 #define kDefaultMinimizedScalingFactor 0.98
 #define kDefaultMaximizedScalingFactor 1.00    
-#define kDefaultNavigationBarOverlap 0.90       
+#define kDefaultNavigationBarOverlap 0.9
 
 #define kDefaultAnimationDuration 0.3 
 
@@ -84,9 +84,7 @@
     for (WASControllerCard* container in self.controllerCards) {
         [self.view addSubview:container];
     }
-
 }
-
 
 -(void) removeNavigationContainersFromSuperView {
     for (WASControllerCard* navigationContainer in self.controllerCards) {
@@ -181,8 +179,12 @@
     else if (WASControllerCardStateDefault == controllerCard.state) {
        
         for (WASControllerCard *currentCard in [self controllerCardsBelowCards:controllerCard]) {
+
             CGFloat deltaDistance = controllerCard.frame.origin.y - controllerCard.origin.y;
             CGFloat yCoordinate = (CGFloat) currentCard.origin.y + deltaDistance;
+            if (yCoordinate < currentCard.origin.y) {
+                yCoordinate = currentCard.origin.y;
+            }
             [currentCard setYCoordinate:yCoordinate];
         }
     }
@@ -215,7 +217,7 @@
     
     _index = index;
     _originY = [controller defaultVerticalOriginForControllerCard:self atIndex:index];
-    
+
     self = [super initWithFrame:navigationController.view.bounds];
     
     if (self) {
@@ -337,21 +339,18 @@
         case UIGestureRecognizerStateBegan:
         {
             if (self.state == WASControllerCardStateFullScreen) {
-                [self shrinkCardToScaledSize:YES];
+                [self shrinkCardToScaledSize:NO];
             }
-            self.panOriginOffsetY = translation.y;
+            self.panOriginOffsetY = [recognizer locationInView: self].y;
         }
             break;
         case UIGestureRecognizerStateChanged:
         {
             [self setYCoordinate:location.y - self.panOriginOffsetY];
-            
-            if (translation.y > 0) {
-                if ((WASControllerCardStateFullScreen == self.state && self.frame.origin.y < _originY) ||
-                    (WASControllerCardStateDefault == self.state && self.frame.origin.y > _originY)) {
-                    if ([self.delegate respondsToSelector:@selector(controllerCard:didUpdatePanPercentage:)]) {
-                        [self.delegate controllerCard:self didUpdatePanPercentage:[self percentageDistanceTravelled]];
-                    }
+            if ((WASControllerCardStateFullScreen == self.state && self.frame.origin.y < _originY) ||
+                (WASControllerCardStateDefault == self.state )) {
+                if ([self.delegate respondsToSelector:@selector(controllerCard:didUpdatePanPercentage:)]) {
+                    [self.delegate controllerCard:self didUpdatePanPercentage:[self percentageDistanceTravelled]];
                 }
             }
         }
@@ -388,7 +387,7 @@
 }
 
 -(void) setFrame:(CGRect)frame {
-    [super setFrame: frame];
+    [super setFrame:frame];
     [self redrawShadow];
 }
 
