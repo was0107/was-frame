@@ -15,7 +15,7 @@
 
 #define kDefaultAnimationDuration 0.3 
 
-#define kDefaultVerticalOrigin 200           
+#define kDefaultVerticalOrigin 100           
 #define kDefaultCornerRadius 5.0
 
 #define kDefaultShadowEnabled YES
@@ -40,8 +40,9 @@
 
 - (void) viewDidLoad
 {
-    [self reloadData];
     [super viewDidLoad];
+    self.view.frame = CGRectMake(0, 0, 320, 480);
+    [self reloadData];
     [self reloadInputViews];
     
 }
@@ -218,8 +219,8 @@
     _index = index;
     _originY = [controller defaultVerticalOriginForControllerCard:self atIndex:index];
 
-    self = [super initWithFrame:navigationController.view.bounds];
-    
+//    self = [super initWithFrame:navigationController.view.bounds];
+    self = [super initWithFrame:CGRectMake(0, 0, 320, 436)];
     if (self) {
         [self setAutoresizesSubviews:YES];
         [self setAutoresizingMask:
@@ -240,7 +241,8 @@
         [self addSubview:self.navigationController.view];
         
         [self setState:WASControllerCardStateDefault animated:NO];
-        
+        NSLog(@"navigationController.view.bounds = %@", NSStringFromCGRect(navigationController.view.bounds));
+
     }
     return self;
 }

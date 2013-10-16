@@ -20,6 +20,7 @@
         UIBarButtonItem *item = [[[UIBarButtonItem alloc] initWithTitle:@"refresh" style:UIButtonTypeInfoDark target:self action:@selector(refresh:)] autorelease];
         self.navigationItem.rightBarButtonItem = item;
         self.view.backgroundColor = [UIColor whiteColor];
+//        self.view.frame = CGRectMake(0, 0, 320, 480);
     }
     return self;
 }
@@ -31,6 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    self.view.frame = CGRectMake(0, -20, 320, 460);
 }
 
 - (void)viewDidUnload
@@ -145,7 +147,7 @@
     label4.textAlignment = UITextAlignmentCenter;
     label5.textAlignment = UITextAlignmentCenter;
     label1.backgroundColor = [UIColor redColor];
-    label2.backgroundColor = [UIColor whiteColor];
+    label2.backgroundColor = [UIColor yellowColor];
     label3.backgroundColor = [UIColor blueColor];
     label4.backgroundColor = [UIColor orangeColor];
     label5.backgroundColor = [UIColor purpleColor];

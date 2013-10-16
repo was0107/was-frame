@@ -39,7 +39,13 @@
     
 //    LogMessage(@"Device", 5, @"%@ log", [contentController_ description] );
     
-    [self.window addSubview:self.contentController.view];
+    // use subview to show
+//    [self.window addSubview:self.contentController.view];
+    
+    //use controller to show
+    Class main = NSClassFromString(@"TestCardViewController");
+    UIViewController *mainViewController_   = [[[main alloc] init] autorelease];
+    self.window.rootViewController = mainViewController_;
     [self.window makeKeyAndVisible];
     
     [WASDebug show];

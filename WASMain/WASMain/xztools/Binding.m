@@ -2,7 +2,7 @@
 //  Binding.m
 //   RssReader
 //
-//  Created by allen.wang on 10/12/24.
+//  Created by 営業支援開発機 on 10/12/24.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
@@ -23,7 +23,7 @@
 	[_bindObjMap setObject:bindObj forKey:bindObjPath];
 	[_bindTargetMap setObject:_targetKeypath forKey:targetObj];
 
-	[targetObj addObserver:self forKeyPath:_targetKeypath options:NSKeyValueObservingOptionNew context:(void *)bindObjPath];
+	//[targetObj addObserver:self forKeyPath:_targetKeypath options:NSKeyValueChangeNewKey context:(void *)bindObjPath];
 	
 	
 }
@@ -41,7 +41,8 @@
 	NSString * bindKeyPath=(NSString*)context;
     id bindObj=[_bindObjMap objectForKey:bindKeyPath];
 	NSString* value=(NSString*)[object valueForKey:keyPath];
-	[bindObj setValue:value forKey:bindKeyPath];	
+	[bindObj setValue:value forKey:bindKeyPath];
+	
 }
 -(void)removeObservers
 {

@@ -18,21 +18,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 
 - (NSInteger) numberOfControllerCardsInController:(WASCardViewController *) controller
 {
-    return 4;
+    return 7;
 }
 
 - (UIViewController *) controller:(WASCardViewController *) controller viewControllerAtIndex:(NSUInteger) index
 {
     Class main = NSClassFromString(@"TestLayoutViewController");
     TestLayoutViewController *result   = [[[main alloc] init] autorelease];
-    result.view.backgroundColor = [UIColor redColor];
-    result.view.bounds = self.view.bounds;
     return result;
 }
 

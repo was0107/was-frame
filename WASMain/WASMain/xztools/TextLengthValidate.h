@@ -2,7 +2,7 @@
 //  TextLengthValidate.h
 //   RssReader
 //
-//  Created by allen.wang on 10/12/28.
+//  Created by 営業支援開発機 on 10/12/28.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 

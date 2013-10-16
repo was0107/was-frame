@@ -8,8 +8,9 @@
 
 #import "TestLayoutViewController.h"
 #import "DetailViewControllerViewController.h"
-static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"表格布局",@"盒式布局",@"嵌套布局"};
-static CGFloat maxPositionY = -40.0f;
+
+static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"表格布局",@"盒式布局",@"嵌套布局",@"UIViewController"};
+//static CGFloat maxPositionY = -40.0f;
 
 @interface TestLayoutViewController ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>
 {
@@ -32,21 +33,28 @@ static CGFloat maxPositionY = -40.0f;
     [self.view addSubview:self.tableView];
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{    
-    if (maxPositionY >= scrollView.contentOffset.y) {
-        [self.tableView setContentOffset:CGPointMake(0, maxPositionY)];
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate) {
+        [self scrollViewDidEndDecelerating:scrollView];
     }
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{    
+//    if (maxPositionY >= scrollView.contentOffset.y) {
+//        [self.tableView setContentOffset:CGPointMake(0, maxPositionY)];
+//    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,7 +72,6 @@ static CGFloat maxPositionY = -40.0f;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     switch (indexPath.row) {
         case 0:
         {
@@ -115,6 +122,11 @@ static CGFloat maxPositionY = -40.0f;
             
         default:
         {
+            UIViewController *detail = [[[UIViewController alloc] init] autorelease];
+            detail.title = titles[indexPath.row];
+            detail.view.backgroundColor = [UIColor redColor];
+            detail.view.transform = CGAffineTransformIdentity;
+            [self.navigationController   pushViewController:detail animated:YES];
         }
             break;
     }
