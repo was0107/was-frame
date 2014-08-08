@@ -44,7 +44,7 @@
 - (void)drawRect:(CGRect)rect
 {
 	[super drawRect:rect];
-    
+
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	if ( context )
 	{
@@ -59,11 +59,13 @@
 		
 		NSUInteger step = 0;
 		
-		for ( NSNumber * value in _plots )
+		for ( NSNumber * value in self.plots )
 		{
+            if (_upperBound - _lowerBound == 0) {
+                continue;
+            }
 			CGFloat f = fminf( fmaxf( [value floatValue], _lowerBound ), _upperBound ) / (_upperBound - _lowerBound);
 			CGPoint p = CGPointMake( baseLine.x, baseLine.y - bound.size.height * f );
-			
 			CGContextAddLineToPoint( context, p.x, p.y );
 			
 			CGContextSetStrokeColorWithColor( context, self.lineColor.CGColor );

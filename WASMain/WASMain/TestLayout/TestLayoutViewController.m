@@ -10,18 +10,12 @@
 #import "DetailViewControllerViewController.h"
 
 static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"表格布局",@"盒式布局",@"嵌套布局",@"UIViewController"};
-//static CGFloat maxPositionY = -40.0f;
+@interface TestLayoutViewController ()<UITableViewDataSource,UITableViewDelegate>
 
-@interface TestLayoutViewController ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>
-{
-    ;
-}
-@property (nonatomic, retain) UIPanGestureRecognizer* panGesture;
 @end
 
 @implementation TestLayoutViewController
 @synthesize tableView = _tableView;
-@synthesize panGesture = _panGesture;
 
 - (void)viewDidLoad
 {
@@ -31,25 +25,6 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
-}
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-    if (!decelerate) {
-        [self scrollViewDidEndDecelerating:scrollView];
-    }
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-    
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{    
-//    if (maxPositionY >= scrollView.contentOffset.y) {
-//        [self.tableView setContentOffset:CGPointMake(0, maxPositionY)];
-//    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -66,24 +41,25 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
     }
-    cell.textLabel.text = titles[indexPath.row];
+    cell.textLabel.text = titles[indexPath.row % 7];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.row) {
+    NSUInteger index = indexPath.row % 7;
+    switch (index) {
         case 0:
         {
             DetailViewControllerViewControllerFlow *detail = [[[DetailViewControllerViewControllerFlow alloc] init] autorelease];
-            detail.title = titles[indexPath.row];
+            detail.title = titles[index];
             [self.navigationController   pushViewController:detail animated:YES];
         }
             break;
         case 1:
         {
             DetailViewControllerViewControllerBorder *detail = [[[DetailViewControllerViewControllerBorder alloc] init] autorelease];
-            detail.title = titles[indexPath.row];
+            detail.title = titles[index];
             [self.navigationController   pushViewController:detail animated:YES];
         }
             break;
@@ -91,8 +67,7 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
         {
             
             DetailViewControllerViewControllerCard *detail = [[[DetailViewControllerViewControllerCard alloc] init] autorelease];         
-            detail.title = titles[indexPath.row];
-            
+            detail.title = titles[index];
             [self.navigationController   pushViewController:detail animated:YES];
         }
             break;
@@ -100,22 +75,21 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
         {
             
             DetailViewControllerViewControllerGrid *detail = [[[DetailViewControllerViewControllerGrid alloc] init] autorelease];         
-            detail.title = titles[indexPath.row];
-            
+            detail.title = titles[index];
             [self.navigationController   pushViewController:detail animated:YES];
         }
             break;
         case 4:
         {
             DetailViewControllerViewControllerBox *detail = [[[DetailViewControllerViewControllerBox alloc] init] autorelease];
-            detail.title = titles[indexPath.row];
+            detail.title = titles[index];
             [self.navigationController   pushViewController:detail animated:YES];
         }
             break;
         case 5:
         {
             DetailViewControllerViewControllerAll *detail = [[[DetailViewControllerViewControllerAll alloc] init] autorelease];
-            detail.title = titles[indexPath.row];
+            detail.title = titles[index];
             [self.navigationController   pushViewController:detail animated:YES];
         }
             break;
@@ -123,7 +97,7 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
         default:
         {
             UIViewController *detail = [[[UIViewController alloc] init] autorelease];
-            detail.title = titles[indexPath.row];
+            detail.title = titles[index];
             detail.view.backgroundColor = [UIColor redColor];
             detail.view.transform = CGAffineTransformIdentity;
             [self.navigationController   pushViewController:detail animated:YES];

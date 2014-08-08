@@ -27,6 +27,9 @@
 
 
 
+#pragma mark ==
+#pragma mark WASCardViewController
+
 
 @interface WASCardViewController()<UIGestureRecognizerDelegate>
 
@@ -195,11 +198,19 @@
 
 
 
+#pragma mark ==
+#pragma mark WASControllerCard
+
 
 @interface WASControllerCard()<UIGestureRecognizerDelegate>
+{
+    UIScrollView *__otherUIScrollView;
+    CGPoint     __otherUIScrollViewOffset;
+}
 -(void) shrinkCardToScaledSize:(BOOL) animated;
 
 -(void) expandCardToFullSize:(BOOL) animated;
+
 @end
 
 @implementation WASControllerCard
@@ -219,8 +230,8 @@
     _index = index;
     _originY = [controller defaultVerticalOriginForControllerCard:self atIndex:index];
 
-//    self = [super initWithFrame:navigationController.view.bounds];
-    self = [super initWithFrame:CGRectMake(0, 0, 320, 436)];
+    self = [super initWithFrame:navigationController.view.bounds];
+//    self = [super initWithFrame:CGRectMake(0, 0, 320, 436)];
     if (self) {
         [self setAutoresizesSubviews:YES];
         [self setAutoresizingMask:
@@ -241,7 +252,6 @@
         [self addSubview:self.navigationController.view];
         
         [self setState:WASControllerCardStateDefault animated:NO];
-        NSLog(@"navigationController.view.bounds = %@", NSStringFromCGRect(navigationController.view.bounds));
 
     }
     return self;
@@ -282,7 +292,6 @@
 -(void) redrawShadow {
     if (kDefaultShadowEnabled) {
         UIBezierPath *path  =  [UIBezierPath bezierPathWithRoundedRect:[self bounds] cornerRadius:kDefaultCornerRadius];
-        
         [self.layer setShadowOpacity: kDefaultShadowOpacity];
         [self.layer setShadowOffset: kDefaultShadowOffset];
         [self.layer setShadowRadius: kDefaultShadowRadius];
@@ -334,17 +343,18 @@
 }
 
 -(void) didPerformPanGesture:(UIPanGestureRecognizer*) recognizer {
-    
     CGPoint location = [recognizer locationInView:self.cardController.view];
     CGPoint translation = [recognizer translationInView:self];
-    
     switch (recognizer.state) {
         case UIGestureRecognizerStateBegan:
         {
-            if (self.state == WASControllerCardStateFullScreen) {
-                [self shrinkCardToScaledSize:NO];
-            }
+//            if (self.state == WASControllerCardStateFullScreen) {
+//                [self shrinkCardToScaledSize:NO];
+//            }
             self.panOriginOffsetY = [recognizer locationInView: self].y;
+            if (__otherUIScrollView) {
+                __otherUIScrollViewOffset = __otherUIScrollView.contentOffset;
+            }
         }
             break;
         case UIGestureRecognizerStateChanged:
@@ -357,6 +367,9 @@
                     [self.delegate controllerCard:self didUpdatePanPercentage:[self percentageDistanceTravelled]];
                 }
             }
+            if (__otherUIScrollView && yPostion > 0) {
+                [__otherUIScrollView setContentOffset:CGPointMake(0, __otherUIScrollViewOffset.y)];
+            }
         }
             break;
         case UIGestureRecognizerStateCancelled:
@@ -364,8 +377,13 @@
         {
             if ([self shouldReturnToState:self.state fromPoint:translation]) {
                 [self setState:self.state animated:YES];
-            } else {
+            } else  {
                 [self setState:(WASControllerCardStateFullScreen == self.state) ? WASControllerCardStateDefault : WASControllerCardStateFullScreen animated:YES];
+            }
+            
+            if (__otherUIScrollView) {
+                [__otherUIScrollView setContentOffset:CGPointMake(0, __otherUIScrollViewOffset.y)];
+                __otherUIScrollView = nil;
             }
         }
             break;
@@ -397,10 +415,11 @@
 
 -(BOOL) shouldReturnToState:(WASControllerCardState) state fromPoint:(CGPoint) point {
     if (WASControllerCardStateFullScreen == state) {
-        return ABS(point.y) < self.navigationController.navigationBar.frame.size.height;
+        return ABS(self.frame.origin.y) <= self.navigationController.navigationBar.frame.size.height;
+//        return ABS(point.y) <= self.navigationController.navigationBar.frame.size.height;
     }
     else if (WASControllerCardStateDefault == state) {
-        return point.y > -self.navigationController.navigationBar.frame.size.height;
+        return point.y >= -self.navigationController.navigationBar.frame.size.height;
     }
     return NO;
 }
@@ -408,20 +427,18 @@
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
+    if ((WASControllerCardStateDefault == self.state || WASControllerCardStateFullScreen == self.state) &&
+        [[self.navigationController viewControllers] count] > 1) {
+        return NO;
+    }
     return YES;
 }
 
-// called when the recognition of one of gestureRecognizer or otherGestureRecognizer would be blocked by the other
-// return YES to allow both to recognize simultaneously. the default implementation returns NO (by default no two gestures can be recognized simultaneously)
-//
-// note: returning YES is guaranteed to allow simultaneous recognition. returning NO is not guaranteed to prevent simultaneous recognition, as the other gesture's delegate may return YES
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
-    NSLog(@"gestureRecognizer.view = %@", [gestureRecognizer.view description]);
-    NSLog(@"otherGestureRecognizer.view = %@", [otherGestureRecognizer.view description]);
     if ([otherGestureRecognizer.view isKindOfClass:[UITableView class]]) {
-        UITableView *tableView = (UITableView *)otherGestureRecognizer.view;
-        if (tableView.contentOffset.y <= 0) {
+        __otherUIScrollView = (UIScrollView *)otherGestureRecognizer.view;
+        if (__otherUIScrollView && __otherUIScrollView.contentOffset.y <= 0) {
             return YES;
         }
     }
@@ -430,8 +447,6 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
-    NSLog(@"touch = %@", [touch description]);
-
     return YES;
 }
 
