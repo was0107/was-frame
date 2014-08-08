@@ -360,7 +360,7 @@
         case UIGestureRecognizerStateChanged:
         {
             float yPostion = location.y - self.panOriginOffsetY;
-            [self setYCoordinate:yPostion <= 0 ? : yPostion];
+            [self setYCoordinate:yPostion <= 0 ? 0 : yPostion];
             if ((WASControllerCardStateFullScreen == self.state && self.frame.origin.y < _originY) ||
                 (WASControllerCardStateDefault == self.state )) {
                 if ([self.delegate respondsToSelector:@selector(controllerCard:didUpdatePanPercentage:)]) {
