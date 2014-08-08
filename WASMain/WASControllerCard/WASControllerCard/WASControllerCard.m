@@ -196,7 +196,7 @@
 
 
 
-@interface WASControllerCard()
+@interface WASControllerCard()<UIGestureRecognizerDelegate>
 -(void) shrinkCardToScaledSize:(BOOL) animated;
 
 -(void) expandCardToFullSize:(BOOL) animated;
@@ -232,10 +232,10 @@
         [self.navigationController.view setClipsToBounds:YES];
         
         UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPerformPanGesture:)];
-//        panGesture.delegate = self;
+        panGesture.delegate = self;
         UILongPressGestureRecognizer* pressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(didPerformLongPress:)];
         [pressGesture setMinimumPressDuration: kDefaultMinimumPressDuration];
-        [self.navigationController.navigationBar addGestureRecognizer: panGesture];
+        [self.navigationController.view addGestureRecognizer: panGesture];
         [self.navigationController.navigationBar addGestureRecognizer:pressGesture];
         
         [self addSubview:self.navigationController.view];
@@ -349,7 +349,8 @@
             break;
         case UIGestureRecognizerStateChanged:
         {
-            [self setYCoordinate:location.y - self.panOriginOffsetY];
+            float yPostion = location.y - self.panOriginOffsetY;
+            [self setYCoordinate:yPostion <= 0 ? : yPostion];
             if ((WASControllerCardStateFullScreen == self.state && self.frame.origin.y < _originY) ||
                 (WASControllerCardStateDefault == self.state )) {
                 if ([self.delegate respondsToSelector:@selector(controllerCard:didUpdatePanPercentage:)]) {
@@ -416,8 +417,24 @@
 // note: returning YES is guaranteed to allow simultaneous recognition. returning NO is not guaranteed to prevent simultaneous recognition, as the other gesture's delegate may return YES
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
-    return NO;// gestureRecognizer == otherGestureRecognizer;
+    NSLog(@"gestureRecognizer.view = %@", [gestureRecognizer.view description]);
+    NSLog(@"otherGestureRecognizer.view = %@", [otherGestureRecognizer.view description]);
+    if ([otherGestureRecognizer.view isKindOfClass:[UITableView class]]) {
+        UITableView *tableView = (UITableView *)otherGestureRecognizer.view;
+        if (tableView.contentOffset.y <= 0) {
+            return YES;
+        }
+    }
+    return gestureRecognizer == otherGestureRecognizer;
 }
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    NSLog(@"touch = %@", [touch description]);
+
+    return YES;
+}
+
 
 @end
 
