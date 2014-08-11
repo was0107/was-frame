@@ -50,7 +50,7 @@
     MPMoviePlayerController* theMovie=[aNotification object];
 	CFShow([aNotification userInfo]);
     [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:theMovie];
-    [theMovie release];
+//    [theMovie release];
 	self.navigationItem.rightBarButtonItem = BARBUTTON(@"Play", @selector(play:));
 //	self.navigationItem.leftBarButtonItem  = BARBUTTON(@"Record", @selector(record:));
 	self.title = nil;

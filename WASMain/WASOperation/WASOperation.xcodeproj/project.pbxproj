@@ -192,7 +192,7 @@
 		DD12632F16ACE5EF000B950E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = allen.wang;
 			};
 			buildConfigurationList = DD12633216ACE5EF000B950E /* Build configuration list for PBXProject "WASOperation" */;
@@ -300,6 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -396,6 +397,7 @@
 				DD12635F16ACE5EF000B950E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD12636016ACE5EF000B950E /* Build configuration list for PBXNativeTarget "WASOperationTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +406,7 @@
 				DD12636216ACE5EF000B950E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

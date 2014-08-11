@@ -80,7 +80,7 @@
 	
 }
 -(BOOL)execValidate{
-	NSLog(@"execValidate %d",[target class]);
+	NSLog(@"execValidate %@",[target class]);
 	return TRUE;
 }
 -(void)removeValidate

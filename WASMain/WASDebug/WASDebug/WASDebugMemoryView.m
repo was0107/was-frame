@@ -198,8 +198,8 @@
 
 - (void)update
 {
-	NSUInteger used = [WASDebugMemoryModel sharedInstance].usedBytes;
-	NSUInteger total = [WASDebugMemoryModel sharedInstance].totalBytes;
+	int64_t used = [WASDebugMemoryModel sharedInstance].usedBytes;
+	int64_t total = [WASDebugMemoryModel sharedInstance].totalBytes;
 	
 	float percent = (total > 0.0f) ? ((float)used / (float)total * 100.0f) : 0.0f;
 	if ( percent >= 50.0f )

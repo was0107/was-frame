@@ -114,13 +114,13 @@
 - (void) calcaTimeString
 {
     if (self.time <10) {
-        self.timeString = [NSString stringWithFormat:@"00:0%d",self.time];
+        self.timeString = [NSString stringWithFormat:@"00:0%lu",(unsigned long)self.time];
     }
     else if (self.time < 60) {
-        self.timeString = [NSString stringWithFormat:@"00:%d",self.time];
+        self.timeString = [NSString stringWithFormat:@"00:%lu",(unsigned long)self.time];
     }
     else if (self.time < 3600) {
-        self.timeString = [NSString stringWithFormat:@"%d:%d",self.time/60, self.time%60];
+        self.timeString = [NSString stringWithFormat:@"%u:%d",self.time/60, self.time%60];
     }
 }
 

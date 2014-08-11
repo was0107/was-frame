@@ -84,7 +84,7 @@
 
 - (int) countComponents
 {
-    return [_component count];
+    return (int)[_component count];
 }
 
 - (Component *) add:(Component *) comp
@@ -198,10 +198,8 @@
 - (void) removeComponent:(Component *)comp
 {
     if (comp.superview == self) {
-        int index = [_component indexOfObject:comp];
-        if (index >= 0) {
-            [self removeComponentAt:index];
-        }
+        NSUInteger index = [_component indexOfObject:comp];
+        [self removeComponentAt:index];
     }
 }
 

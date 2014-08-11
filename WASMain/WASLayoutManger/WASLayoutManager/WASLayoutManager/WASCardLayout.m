@@ -165,7 +165,7 @@
 {
     [self checkLayout:parent];
     Component *next = nil;
-    int ncomponents = [self.contents count];
+    NSUInteger ncomponents = [self.contents count];
     for (int i = 0; i < ncomponents; i++) {
         WASCard *card = [[self contents] objectAtIndex:i];
         if ([theName isEqualToString:card.name]) {
@@ -197,7 +197,7 @@
         [comp setHidden:YES];
     }
 
-    for (int i=0, total = [self.contents count]; i < total; i++) {
+    for (NSUInteger i=0, total = [self.contents count]; i < total; i++) {
         if ([name isEqualToString:(((WASCard *)[_contents objectAtIndex:i]).name)]) {
             ((WASCard *)[_contents objectAtIndex:i]).component = comp;
             return;
@@ -208,7 +208,7 @@
 
 - (void) removeLayoutComponent:(Component *)comp
 {
-    for (int i=0, total = [self.contents count]; i < total; i++) {
+    for (NSUInteger i=0, total = [self.contents count]; i < total; i++) {
         if (comp == (((WASCard *)[_contents objectAtIndex:i]).component)) {
             if (!comp.isHidden && comp.superview) {
                 [self next:(Container *)comp.superview];
