@@ -9,6 +9,9 @@
 #import "TestLayoutViewController.h"
 #import "DetailViewControllerViewController.h"
 
+
+#define kViewWithHeight(x)  [[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, x)] autorelease]
+
 static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"表格布局",@"盒式布局",@"嵌套布局",@"UIViewController"};
 @interface TestLayoutViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -20,11 +23,18 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor grayColor];
     self.title = @"布局控件";
-    self.tableView = [[[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain] autorelease ];
+    self.tableView = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480-0) style:UITableViewStylePlain] autorelease ];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.backgroundColor = [UIColor yellowColor];
+    self.tableView.tableHeaderView = kViewWithHeight(1.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0.1)] autorelease];
+    self.tableView.tableFooterView =  kViewWithHeight(1.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0.1)] autorelease];
+    self.tableView.sectionHeaderHeight = 0.1f;
+    self.tableView.sectionFooterHeight = 0.1f;
     [self.view addSubview:self.tableView];
+    [self.tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -39,15 +49,37 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
     if (!cell) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.backgroundColor = [UIColor redColor];
         
     }
     cell.textLabel.text = titles[indexPath.row % 7];
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 1.1f;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return  kViewWithHeight(1.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1.1)] autorelease];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 1.1f;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return  kViewWithHeight(1.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1.1)] autorelease];
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSUInteger index = indexPath.row % 7;
+    NSUInteger index = 6;//indexPath.row % 7;
     switch (index) {
         case 0:
         {
