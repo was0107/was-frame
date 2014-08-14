@@ -382,7 +382,7 @@
             }
             
             if (__otherUIScrollView) {
-                [__otherUIScrollView setContentOffset:CGPointMake(0, __otherUIScrollViewOffset.y)];
+                [__otherUIScrollView setContentOffset:CGPointMake(0, __otherUIScrollViewOffset.y) animated:YES];
                 __otherUIScrollView = nil;
             }
         }
