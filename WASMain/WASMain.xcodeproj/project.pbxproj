@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49692F481A5F800000E8C2C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49692F471A5F800000E8C2C8 /* Images.xcassets */; };
 		6BA3581E1522874E00D49EE7 /* ContentController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA3581D1522874E00D49EE7 /* ContentController_iPhone.m */; };
 		6BA358211522876300D49EE7 /* ContentController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA358201522876300D49EE7 /* ContentController_iPad.m */; };
 		6BA358A41522A5C100D49EE7 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA358A31522A5C000D49EE7 /* DetailViewController.m */; };
@@ -79,6 +80,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		49692F471A5F800000E8C2C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6BA3581C1522874E00D49EE7 /* ContentController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentController_iPhone.h; sourceTree = "<group>"; };
 		6BA3581D1522874E00D49EE7 /* ContentController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentController_iPhone.m; sourceTree = "<group>"; };
 		6BA3581F1522876300D49EE7 /* ContentController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentController_iPad.h; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				6BE6F941151A8A3D00D36392 /* XIB resouce */,
 				DD191D98165C9D7E008E971D /* resources */,
 				DD1E29EE15AFBC390093D256 /* images */,
+				49692F471A5F800000E8C2C8 /* Images.xcassets */,
 				6BE6F8B0151A845000D36392 /* Supporting Files */,
 			);
 			path = WASMain;
@@ -524,6 +527,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
+				TargetAttributes = {
+					6BE6F8A4151A844F00D36392 = {
+						DevelopmentTeam = 432R882V66;
+					};
+				};
 			};
 			buildConfigurationList = 6BE6F89F151A844F00D36392 /* Build configuration list for PBXProject "WASMain" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -556,6 +564,7 @@
 				DD1E29F615AFBC390093D256 /* blueArrowDown@2x.png in Resources */,
 				DD191D9D165C9D7E008E971D /* bug@2x.png in Resources */,
 				DD191D9E165C9D7E008E971D /* close@2x.png in Resources */,
+				49692F481A5F800000E8C2C8 /* Images.xcassets in Resources */,
 				DD191D9F165C9D7E008E971D /* file@2x.png in Resources */,
 				DD191DA0165C9D7E008E971D /* folder@2x.png in Resources */,
 				DD0C4AD216B76C6200CB9793 /* TestBindingViewController.xib in Resources */,
@@ -687,13 +696,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WASMain/WASMain-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "WASMain/WASMain-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos\"",
@@ -713,13 +724,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WASMain/WASMain-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "WASMain/WASMain-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Main-gvshryvumemnezdwhxfofdgslqas/Build/Products/Debug-iphoneos\"",

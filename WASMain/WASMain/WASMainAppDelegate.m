@@ -43,12 +43,15 @@
 //    [self.window addSubview:self.contentController.view];
     
     //use controller to show
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    rect.origin.y = 20;
+    self.window = [[[UIWindow alloc] initWithFrame:rect] autorelease];
     Class main = NSClassFromString(@"TestCardViewController");
     UIViewController *mainViewController_   = [[[main alloc] init] autorelease];
     self.window.rootViewController = mainViewController_;
     [self.window makeKeyAndVisible];
     
-    [WASDebug show];
+//    [WASDebug show];
     return YES;
 }
 

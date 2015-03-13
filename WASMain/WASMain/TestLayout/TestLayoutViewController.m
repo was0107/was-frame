@@ -25,7 +25,7 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
     self.title = @"布局控件";
-    self.tableView = [[[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480-0) style:UITableViewStylePlain] autorelease ];
+    self.tableView = [[[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds] style:UITableViewStylePlain] autorelease ];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor yellowColor];
@@ -58,28 +58,28 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 1.1f;
+    return 0.1f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return  kViewWithHeight(1.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1.1)] autorelease];
+    return  kViewWithHeight(0.1f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1.1)] autorelease];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 1.1f;
+    return 0.1f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    return  kViewWithHeight(1.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1.1)] autorelease];
+    return  kViewWithHeight(0.1f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 1.1)] autorelease];
 }
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSUInteger index = 6;//indexPath.row % 7;
+    NSUInteger index = indexPath.row % 7;
     switch (index) {
         case 0:
         {

@@ -78,11 +78,11 @@
     flowLayout.newAlign = WASFlowLayout.CENTER;
     flowLayout.hgap = flowLayout.vgap = 1;   
     
-    UILabel *label1 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 40)] autorelease];
-    UILabel *label2 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 40, 100, 40)] autorelease];
-    UILabel *label3 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 80, 200, 40)] autorelease];
-    UILabel *label4 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 120, 100, 40)] autorelease];
-    UILabel *label5 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 160, 100, 40)] autorelease];
+    UILabel *label1 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 20, 300, 40)] autorelease];
+    UILabel *label2 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 60, 100, 40)] autorelease];
+    UILabel *label3 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 100, 200, 40)] autorelease];
+    UILabel *label4 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 140, 100, 40)] autorelease];
+    UILabel *label5 = [[[UILabel alloc] initWithFrame:CGRectMake(0, 180, 100, 40)] autorelease];
     label1.textAlignment = UITextAlignmentCenter;
     label2.textAlignment = UITextAlignmentCenter;
     label3.textAlignment = UITextAlignmentCenter;
