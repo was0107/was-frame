@@ -51,7 +51,7 @@
     self.window.rootViewController = mainViewController_;
     [self.window makeKeyAndVisible];
     
-//    [WASDebug show];
+    [WASDebug show];
     return YES;
 }
 

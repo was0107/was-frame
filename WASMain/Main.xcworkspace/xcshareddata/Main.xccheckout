@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CB286308-DBFF-450E-8384-AD3237CEE728</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Main</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>370B99BA395A0D63BFEE1559DE979F54F0ADF124</key>
+		<string>https://github.com/was0107/was-frame.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WASMain/Main.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>370B99BA395A0D63BFEE1559DE979F54F0ADF124</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/was0107/was-frame.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>370B99BA395A0D63BFEE1559DE979F54F0ADF124</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>370B99BA395A0D63BFEE1559DE979F54F0ADF124</string>
+			<key>IDESourceControlWCCName</key>
+			<string>was-frame</string>
+		</dict>
+	</array>
+</dict>
+</plist>

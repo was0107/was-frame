@@ -17,23 +17,24 @@
 @implementation WASBaseLayoutViewController
 @synthesize container = _container;
 
-
-- (void) loadView
-{
-    [super loadView];
-    if (!_container) {
-        WASFlowLayout *flow = [[[WASFlowLayout alloc] init] autorelease];
-        flow.newAlign = WASFlowLayout.LEFT;
-        flow.hgap = flow.vgap = 0;
-        _container = [[WASContainer alloc] initWithFrame:[UIScreen mainScreen] .applicationFrame ];  
-        _container.backgroundColor = [UIColor grayColor];
-        _container.layoutManager = flow;
-    }
-    self.view = _container;
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    [self.view addSubview:self.container];
 }
 
 - (WASContainer *)container
 {
+    if (!_container) {
+        WASFlowLayout *flow = [[[WASFlowLayout alloc] init] autorelease];
+        flow.newAlign = WASFlowLayout.LEFT;
+        flow.hgap = flow.vgap = 0;
+        CGRect rect = [UIScreen mainScreen] .applicationFrame;
+        rect.origin.y = 44.0f;
+        rect.size.height -= 44.0f;
+        _container = [[WASContainer alloc] initWithFrame: rect];
+        _container.backgroundColor = [UIColor grayColor];
+        _container.layoutManager = flow;
+    }
     return _container;
 }
 
