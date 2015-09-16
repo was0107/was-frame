@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
+//    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 
@@ -32,6 +32,8 @@
 {
     Class main = NSClassFromString(@"TestLayoutViewController");
     TestLayoutViewController *result   = [[[main alloc] init] autorelease];
+    static NSString * titles[] = {@"布局控件0",@"布局控件1",@"布局控件2",@"布局控件3"};
+    result.title = titles[index];
     return result;
 }
 

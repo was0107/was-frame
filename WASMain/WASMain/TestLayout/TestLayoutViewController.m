@@ -23,16 +23,20 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor grayColor];
-    self.title = @"布局控件";
-    self.tableView = [[[UITableView alloc] initWithFrame:[[UIScreen mainScreen] bounds] style:UITableViewStylePlain] autorelease ];
+//    self.title = @"布局控件";
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    rect.origin.y = 44.0f;
+    rect.size.height -= 44.0f;
+    self.tableView = [[[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain] autorelease ];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.tableView.backgroundColor = [UIColor yellowColor];
-    self.tableView.tableHeaderView = kViewWithHeight(1.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0.1)] autorelease];
-    self.tableView.tableFooterView =  kViewWithHeight(1.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0.1)] autorelease];
-    self.tableView.sectionHeaderHeight = 0.1f;
-    self.tableView.sectionFooterHeight = 0.1f;
+//    self.tableView.backgroundColor = [UIColor yellowColor];
+    self.tableView.tableHeaderView = kViewWithHeight(0.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0.1)] autorelease];
+    self.tableView.tableFooterView =  kViewWithHeight(0.0f);//[[[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 0.1)] autorelease];
+    self.tableView.sectionHeaderHeight = 0.0f;
+    self.tableView.sectionFooterHeight = 0.0f;
     [self.view addSubview:self.tableView];
     [self.tableView reloadData];
 }
@@ -49,7 +53,7 @@ static NSString *titles[] = {@"流式布局",@"边框布局",@"卡片布局",@"�
     if (!cell) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.backgroundColor = [UIColor redColor];
+//        cell.backgroundColor = [UIColor redColor];
         
     }
     cell.textLabel.text = titles[indexPath.row % 7];

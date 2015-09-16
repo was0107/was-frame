@@ -16,9 +16,9 @@
 #define kDefaultAnimationDuration 0.3 
 
 #define kDefaultVerticalOrigin 100           
-#define kDefaultCornerRadius 5.0
+#define kDefaultCornerRadius 2.0
 
-#define kDefaultShadowEnabled YES
+#define kDefaultShadowEnabled NO
 #define kDefaultShadowColor [UIColor blackColor]
 #define kDefaultShadowOffset CGSizeMake(0, -5)
 #define kDefaultShadowRadius kDefaultCornerRadius
@@ -44,7 +44,7 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    self.view.frame = CGRectMake(0, 0, 320, 480);
+    self.view.frame = [[UIScreen mainScreen] bounds];
     [self reloadData];
     [self reloadInputViews];
     
@@ -231,7 +231,6 @@
     _originY = [controller defaultVerticalOriginForControllerCard:self atIndex:index];
 
     self = [super initWithFrame:navigationController.view.bounds];
-//    self = [super initWithFrame:CGRectMake(0, 0, 320, 436)];
     if (self) {
         [self setAutoresizesSubviews:YES];
         [self setAutoresizingMask:
@@ -273,7 +272,7 @@
             [self setYCoordinate:0];
             break;
         case WASControllerCardStateHiddenBottom:
-             [self setYCoordinate:(self.cardController.view.frame.size.height + abs(kDefaultShadowOffset.height)*3)];
+             [self setYCoordinate:(self.cardController.view.frame.size.height + fabs(kDefaultShadowOffset.height)*3)];
             break;
         case WASControllerCardStateDefault:
             [self shrinkCardToScaledSize:YES];
@@ -367,7 +366,7 @@
                     [self.delegate controllerCard:self didUpdatePanPercentage:[self percentageDistanceTravelled]];
                 }
             }
-            if (__otherUIScrollView && yPostion > 0) {
+            if (__otherUIScrollView && yPostion >= 0) {
                 [__otherUIScrollView setContentOffset:CGPointMake(0, __otherUIScrollViewOffset.y)];
             }
         }
