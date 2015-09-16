@@ -32,24 +32,28 @@ DEF_SINGLETON( WASDebugBoard )
     self = [super init];
     if ( self )
     {
-        UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -20, 320, 20)];
-        tipLabel.text = @"allen.wang@b5m.com";
+        CGRect rect = [[UIScreen mainScreen] bounds];
+        self.view.frame = rect;
+        self.view.backgroundColor = [UIColor blackColor];
+        UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, rect.size.width, 20)];
+        tipLabel.text = @"boguang@b5m.com";
         tipLabel.textColor = [UIColor whiteColor];
-        tipLabel.backgroundColor = [UIColor clearColor];
-        tipLabel.textAlignment = UITextAlignmentCenter;
+        tipLabel.backgroundColor = [UIColor blackColor];
+        tipLabel.textAlignment = NSTextAlignmentRight;
         tipLabel.font = [UIFont systemFontOfSize:12];
         [self.view addSubview:tipLabel];
         
         CGRect bottomFrame;
         bottomFrame.size.width = self.view.frame.size.width;
-        bottomFrame.size.height = self.view.frame.size.height - 44;
+        bottomFrame.size.height = self.view.frame.size.height -64;
        _sandBoxcontroller = [[UINavigationController alloc] initWithRootViewController:[WASDebugSandBoxViewController sharedInstance]];
         _sandBoxcontroller.view.backgroundColor = [UIColor blackColor];
-        
+
         [_sandBoxcontroller setNavigationBarHidden:YES];
         [self.view addSubview:_sandBoxcontroller.view];
         [self.view addSubview:[WASDebugDashBoard sharedInstance]];
         
+        bottomFrame.origin.y = 20.0f;
         _sandBoxcontroller.view.frame = bottomFrame;
         [WASDebugDashBoard sharedInstance].frame = bottomFrame;
         

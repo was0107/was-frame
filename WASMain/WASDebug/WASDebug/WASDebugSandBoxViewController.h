@@ -13,8 +13,9 @@
 @interface WasDebugSandboxCell : UITableViewCell
 {
 	UIImageView *	_iconView;
-	UILabel *       _nameLabel;
-	UILabel *       _sizeLabel;
+    UILabel *       _nameLabel;
+    UILabel *       _sizeLabel;
+    UIView  *       _lineLabel;
 }
 - (void)bindData:(NSObject *)data;
 @end

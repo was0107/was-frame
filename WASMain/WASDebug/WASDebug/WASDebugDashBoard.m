@@ -18,7 +18,9 @@ DEF_SINGLETON( WASDebugDashBoard )
     if (self) {
         self.backgroundColor =  [UIColor blackColor];
         self.layer.borderColor = [[UIColor whiteColor] CGColor];
-        self.frame = CGRectMake(0, 0, 320, 416);
+        CGRect rect = [[UIScreen mainScreen] bounds];
+        rect.size.height -= 64.0f;
+        self.frame = rect;
         _memoryView = [[WASDebugMemoryView alloc] initWithFrame:self.frame];
         [self addSubview:_memoryView];
         [self observeTick];

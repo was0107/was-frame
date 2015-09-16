@@ -28,7 +28,7 @@
         
         _nameLabel = [[UILabel alloc] init];
         _nameLabel.backgroundColor = [UIColor clearColor];
-        _nameLabel.textColor = [UIColor whiteColor];
+        _nameLabel.textColor = [UIColor grayColor];
         _nameLabel.textAlignment = UITextAlignmentLeft;
         _nameLabel.font = [UIFont systemFontOfSize:13];
         _nameLabel.lineBreakMode = UILineBreakModeHeadTruncation;
@@ -36,14 +36,18 @@
         [self addSubview:_nameLabel];
         
         _sizeLabel = [[UILabel alloc] init];
-        _sizeLabel.textColor = [UIColor whiteColor];
+        _sizeLabel.textColor = [UIColor grayColor];
         _sizeLabel.backgroundColor = [UIColor clearColor];
         _sizeLabel.textAlignment = UITextAlignmentRight;
         _sizeLabel.font = [UIFont systemFontOfSize:13];
         _sizeLabel.lineBreakMode = UILineBreakModeClip;
         _sizeLabel.numberOfLines = 1;
-        [self addSubview:_sizeLabel];	
-
+        [self addSubview:_sizeLabel];
+        
+        _lineLabel = [[UIView alloc] init];
+        _lineLabel.backgroundColor = [UIColor lightGrayColor];
+        _lineLabel.alpha = 0.5f;
+        [self addSubview:_lineLabel];
     }
     return self;
 }
@@ -74,6 +78,12 @@
 	sizeFrame.origin.x = bound.width - sizeFrame.size.width - 5.0f;
 	sizeFrame.origin.y = 0.0f;
 	_sizeLabel.frame = sizeFrame;
+    
+    
+    CGRect lineFrame = self.frame;
+    lineFrame.origin.y = lineFrame.size.height - .5f;
+    lineFrame.size.height = 1;
+    _lineLabel.frame = lineFrame;
 }
 
 - (void)bindData:(NSObject *)data
@@ -118,7 +128,7 @@
     [_iconView release], _iconView = nil;
     [_nameLabel release], _nameLabel = nil;
     [_sizeLabel release], _sizeLabel = nil;
-	
+    [_lineLabel release], _lineLabel = nil;
 	[super dealloc];
 }
 
@@ -155,6 +165,7 @@ DEF_SINGLETON(WASDebugSandBoxViewController)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blackColor];
 	// Do any additional setup after loading the view.
 //    [self setBaseInsets:UIEdgeInsetsMake(0.0f, 0, 44.0f, 0)];
 
@@ -186,7 +197,7 @@ DEF_SINGLETON(WASDebugSandBoxViewController)
     
     if (!cell) {
         cell = [[[WasDebugSandboxCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:WasDebugSandboxCellIdentifier] autorelease];
-        cell.backgroundColor = [UIColor whiteColor];
+        cell.backgroundColor = [UIColor colorWithRed:236.0f/255.0f green:236.0f/255.0f blue:236.0f/255.0f alpha:1];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
     }
